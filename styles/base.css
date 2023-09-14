@@ -16,12 +16,30 @@ header img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+    color: purple;
+}
+
+header h1 {
+    display: block;
+    margin-top: 100px;
+    text-align: left;
+    font-size: 18px;
 }
 
 nav {
     background-color: #333;
     color: #fff;
     text-align: center;
+    padding: auto;  
 }
 
 nav ul {
@@ -32,11 +50,15 @@ nav ul {
 nav li {
     display: inline;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
+    text-align: center;
+    padding: 35px;
+    background-color: black;
 }
 
 main {
@@ -74,3 +96,4 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
