@@ -87,6 +87,23 @@ h2 {
     text-align: center;
 }
 
+main {
+	margin: 0;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+	width: 760px;
+	background-color: #eee;
+	color: #000;
+}
+
+#mode {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3rem;
+	cursor: pointer;
+}
+
 
 
 /* Media query for small screens (e.g., smartphones and tablets) */
