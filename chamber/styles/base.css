@@ -121,7 +121,70 @@ footer {
     margin-top: 100px;
 }
 
+/* Style for the Current Events section */
+.current-events {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
 
+.current-events h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.current-events p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for the Weather Card section */
+.weather-card {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.weather-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for the Company Spotlights section */
+.company-spotlights {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.company-spotlights h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.spotlight {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.spotlight h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.spotlight p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
 /* Additional styles for specific elements can be added here */
 
