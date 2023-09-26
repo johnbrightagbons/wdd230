@@ -1,24 +1,28 @@
-// Get the current year
-const currentYear = new Date().getFullYear();
-document.querySelector('#year').textContent = currentYear; // Set the current year in the 'year' element
+// Function to format the date as "Month Day, Year"
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString(undefined, options);
+}
 
 // Get the last modified date from the document
 const lastModifiedDate = new Date(document.lastModified);
-document.querySelector('#lastModified').textContent = "Last Modified: " + lastModifiedDate.toLocaleString(); // Set the formatted last modified date in the 'lastModified' element
 
-// Update the HTML content with the current year and last modified date
-document.addEventListener("DOMContentLoaded", function () {
-  const copyrightYearElement = document.querySelector("#current-year");
-  const lastModifiedDateElement = document.querySelector("#last-modified-date");
+// Get the current year
+const currentYear = new Date().getFullYear();
 
-  if (copyrightYearElement) {
-    copyrightYearElement.textContent = currentYear; // Set the current year in the 'current-year' element
-  }
+// Set the last modified date and current year in the respective HTML elements
+const lastModifiedElement = document.getElementById('last-modified-date');
+const currentYearElement = document.getElementById('current-year');
 
-  if (lastModifiedDateElement) {
-    lastModifiedDateElement.textContent = lastModifiedDate.toLocaleString(); // Set the formatted last modified date in the 'last-modified-date' element
-  }
-});
+if (lastModifiedElement) {
+  lastModifiedElement.textContent = formatDate(lastModifiedDate);
+}
+
+if (currentYearElement) {
+  currentYearElement.textContent = currentYear;
+}
+
+
 
 // Dark mode toggle
 const main = document.querySelector("main");
