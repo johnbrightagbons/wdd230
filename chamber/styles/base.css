@@ -190,5 +190,17 @@ footer {
 
 /* Media query for small screens (e.g., smartphones and tablets) */
 @media screen and (max-width: 767px) {
-    /* Define styles for smaller screens here */
+    /* Switch to a single column layout */
+    .container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    /* Adjust styles for the sidebar and content in the single-column layout */
+    .sidebar {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
 }
