@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pictures {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: steelblue;
+    animation: fade 15s ;
+    align-items: center;
+}
+
+footer {
+    background-color: seagreen;
+    text-align: center;
+}
+
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start with zero opacity */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+    }
+  }
