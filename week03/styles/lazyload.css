@@ -1,5 +1,7 @@
 h1 {
     text-align: center;
+    background-color:steelblue;
+    margin-bottom: 0px;
 }
 
 main {
@@ -22,6 +24,8 @@ main {
 footer {
     background-color: seagreen;
     text-align: center;
+    margin-bottom: -50px;   
+    margin-top: -16px; 
 }
 
 
