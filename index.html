@@ -33,6 +33,7 @@
               <div class="bar"></div>
         </div>
 
+
         <div id="mode">
             ☑️
         </div>
@@ -46,6 +47,17 @@
             <li><a href="https://codepen.io/Bright-Agbons-John/pen/LYMebGx">Assignment</a></li>
         </ul>
     </nav>
+    <div class="hero">
+        <picture>
+            <source srcset="week03/images/ghana-temple.webp" media="(max-width: 400px)">
+            <source srcset="week03/images/ghana-temple.webp" media="(max-width: 960px)">
+            <img src="week03/images/aba-temple.webp" alt="Large Image" width="500" height="250"> 
+            <div class="overlay">
+                <p class="mobile-label">Aba, Nigeria Temple</p>
+                <p class="large-label">Accra, Ghana Temple</p>
+            </div>
+        </picture>
+    </div>
 
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
@@ -71,15 +83,22 @@
             <label for="visits">Number of Visits to the page:</label>
             <input type="number" id="visits" name="visits" placeholder="Enter number of visits to the page">
         </section>
-    </main>
+</main>
 
 
+<div id="map">
+    <!-- Google Map iframe -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.792106398868!2d6.292973!3d5.658853
+
+    !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xYourLatitudeHere!2sYourLocationHere!5e0!3m2!1sen!2sus!4vYourMapVersionHere" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 <footer>
     <p>&copy; 2023 John Bright Agbons, Nigeria </p>
     <p id="lastModified"> Last Modified: <span id="last-modified-date"></span></p>
     <p id="current-year"></p>
 </footer>
+
 
 <script src="scripts/getDates.js"></script>
 

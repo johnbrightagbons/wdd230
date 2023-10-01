@@ -104,8 +104,57 @@ main {
 	cursor: pointer;
 }
 
+ /* Additional CSS styles for overlay and temple image */
+ .hero {
+  position: relative;
+}
+
+.temple-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Additional CSS for the map */
+#map {
+  width: 100%;
+  height: 400px;
+}
 
 
+/* Hide both labels by default */
+.large-label {
+  display: none;
+}
+
+ /* Show the mobile label for screens up to 400px wide */
+ @media (max-width: 400px) {
+  .large-label {
+      display: none;
+  }
+  .mobile-label {
+      display: block;
+  }
+}
+
+/* Show the large label for screens between 401px and 960px wide */
+@media (min-width: 401px) and (max-width: 960px) {
+  .large-label {
+      display: block;
+  }
+  .mobile-label {
+      display: none;
+  }
+}
 /* Media query for small screens (e.g., smartphones and tablets) */
 @media screen and (max-width: 767px) {
     body {

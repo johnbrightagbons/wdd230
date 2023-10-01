@@ -39,3 +39,39 @@ modeButton.addEventListener("click", () => {
     modeButton.textContent = "❎"; // Update the button text
   }
 });
+
+
+// Check if the visit count is stored in localStorage
+let visitCount = localStorage.getItem('visitCount');
+
+// If visitCount is null (first visit), initialize it to 1, otherwise increment it
+if (visitCount === null) {
+    visitCount = 1;
+} else {
+    visitCount = parseInt(visitCount) + 1;
+}
+
+// Update the visit count display
+document.getElementById('visit-count').textContent = visitCount;
+
+// Store the updated visit count in localStorage
+localStorage.setItem('visitCount', visitCount.toString());
+
+
+ // Get references to the elements
+ const templeName = document.getElementById("overlay");
+
+ // Function to update temple name based on screen size
+ function updateTempleName() {
+     if (window.innerWidth <= 400) {
+         templeName.textContent = "Ghana Temple (Mobile View)";
+     } else if (window.innerWidth <= 960) {
+         templeName.textContent = "Aba Nigeria Temple (Larger View)";
+     } else {
+         templeName.textContent = "Aba Nigeria Temple (Default)";
+     }
+ }
+
+ // Call the function on page load and resize
+ window.addEventListener("load", updateTempleName);
+ window.addEventListener("resize", updateTempleName);
