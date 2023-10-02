@@ -1,0 +1,14 @@
+/* Mobile view: Single column layout */
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+    }
+}
+
+/* Apply the hover effect only for larger views */
+@media screen and (min-width: 961px) {
+    .image-gallery figure:hover img {
+        transform: scale(1.1); /* Increase the image size on hover */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+    }
+}
