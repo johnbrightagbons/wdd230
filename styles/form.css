@@ -1,0 +1,69 @@
+/* Define root variables */
+:root {
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+  }
+  
+  /* Apply root variables to body */
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the form */
+  form {
+    margin: 0 auto; /* Center the form horizontally */
+    max-width: 700px; /* Limit the form width for readability */
+    padding: 20px;
+    border: 5px solid #5b40f5;
+    border-radius: 10px;
+  }
+  
+  /* Style form labels for accessibility and alignment */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style form inputs */
+  input[type="text"],
+  input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px; /* Add spacing between inputs */
+    border: 1px solid #4ea51c;
+    border-radius: 5px;
+  }
+  
+  /* Style form submit button */
+  input[type="submit"] {
+    background-color: #520ad8;
+    color: #fff;
+    padding: 10px 20px;
+    border: 5px solid lawngreen;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  /* Style form submit button on hover */
+  input[type="submit"]:hover {
+    background-color: #92b300;
+  }
+  
+  /* Add spacing for readability */
+  h1,
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Add custom styling for error messages if needed */
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  

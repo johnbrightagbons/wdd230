@@ -7,21 +7,31 @@ body {
 
 /* Container styles */
 .container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout for mobile */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  grid-template-rows: 50fr 50fr ;
+  grid-gap: 10px;
+  height: 720px
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+  }
+
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 /* Sidebar styles */
 .sidebar {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    grid-column: 1; /* Sidebar takes the first column */
-    grid-row: 1 / span 2; /* Expands vertically to two rows */
+    grid-row-start: 1;
+    grid-row-end: 4;
 }
 
 .sidebar h2 {
@@ -126,7 +136,8 @@ header{
 }
 
 #hero-message p {
-color: aqua;
+color: black;
+text-align: start,end;
 }
 
 
@@ -163,6 +174,10 @@ nav a {
 nav a:hover {
     background-color: rgba(228, 228, 228, 0.2);
 }
+/* selected link */
+a:active {
+    color: #0000FF;
+  }
 
 /* Style the footer */
 footer {

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development John Bright Agbons course assignment portal">
+    <title>John Bright Agbons - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+    <link rel="icon" href="images/shopping_1162456.png">
+    <meta property="og:url"                content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157"> 
+    <meta property="og:type"               content="website">
+    <meta property="og:title"              content="Slizzlers">
+    <meta property="og:description"        content="A eatery center in Benin City"> 
+    <meta property="og:image"              content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" >
+    <meta name="author" content="John Bright Agbons">
+</head>
+
+
+<body>
+    <header>
+        <img class="profile-pic" src="images/dp.jpg" alt="My Profile Picture">
+        <h1>John Bright Agbons</h1>
+    </header>
+
+
+    <nav>
+        <div id="menu" class="mobile-menu">
+            <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+        </div>
+
+
+        <div id="mode">
+            ☑️
+        </div>
+        <h1>Dark Mode</h1>
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber">Chamber</a> </li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form">Form</a></li>
+            
+        </ul>
+    </nav>
+    <main>
+        <h2>User Registration</h2>
+        <form id="userRegistrationForm" action="process_form.php" method="POST">
+          <div class="form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username" name="" required>
+          </div>
+
+          <div class="form">
+          <label for="password">Password:</label>
+          <tr>
+            <td> <input type= "password" placeholder="Password" name="" required>
+          <tr>  
+          </div>
+        
+          <div class="form">
+          <label for="confirm-password">Password:</label>
+          <tr>
+            <td> <input type= "password" placeholder="Password" name="" required>
+          <tr>  
+          </div>
+
+          <div class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+              title="Please enter a valid email address ending with @byui.edu">
+          </div>
+
+          <div class="form">
+            <label for="gender">Gender</label>
+            <td> 
+                <input type="radio" name="Gender"> Male
+                <input type="radio" name="Gender"> Female
+                <tr>
+          
+          <div class="form">
+            <label for="rating">Rate this page:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
+            <output for="rating" id="ratingOutput">5</output>
+          </div>
+
+          </div>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+
+<footer>
+    <p>&copy; 2023 John Bright Agbons, Nigeria </p>
+    <p id="lastModified"> Last Modified: <span id="last-modified-date"></span></p>
+    <p id="current-year"></p>
+</footer>
+
+
+<script src="scripts/getDates.js"></script>
+
+
+   
+</body>
+</html>
