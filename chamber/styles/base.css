@@ -14,10 +14,11 @@ body {
   height: 720px
 }
 
+
+
 header {
     grid-column-start: 1;
-    grid-column-end: 3;
-    
+    grid-column-end: 3; 
   }
 
 
@@ -41,10 +42,12 @@ footer {
 
 .sidebar nav ul {
     list-style: none;
+    
 }
 
 .sidebar nav ul li {
     margin-bottom: 10px;
+    
 }
 
 .sidebar nav ul li a {
