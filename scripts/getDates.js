@@ -75,3 +75,30 @@ localStorage.setItem('visitCount', visitCount.toString());
  // Call the function on page load and resize
  window.addEventListener("load", updateTempleName);
  window.addEventListener("resize", updateTempleName);
+
+
+
+ // Java Script for Form 
+        const registrationForm = document.getElementById("registrationForm");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const ratingInput = document.getElementById("rating");
+        const ratingValue = document.getElementById("ratingValue");
+
+        registrationForm.addEventListener("submit", function (event) {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                alert("Passwords do not match. Please try again.");
+                passwordInput.value = "";
+                confirmPasswordInput.value = "";
+                passwordInput.focus();
+            }
+        });
+
+        ratingInput.addEventListener("input", function () {
+            const currentValue = ratingInput.value;
+            ratingValue.textContent = `Current Value: ${currentValue}`;
+        });

@@ -1,0 +1,23 @@
+/* CSS for the <main> element */
+h1, p {
+    background-color: #f0f0f0; /* Background color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align the content */
+    align-items: center;
+}
+
+/* CSS for the <h1> element within <main> */
+ h1 {
+    color: #333; /* Text color */
+    font-size: 24px; /* Font size */
+
+}
+
+/* CSS for the <p> element within <main> */
+ p{
+    color: #666; /* Text color */
+    font-size: 18px; /* Font size */
+    margin: 100px;
+    border: #333;
+    margin-right: 100px;
+}

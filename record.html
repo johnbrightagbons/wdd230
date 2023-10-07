@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission Confirmation</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development John Bright Agbons course assignment portal">
+    <title>John Bright Agbons - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+    <link rel="stylesheet" type="text/css" href="styles/record.css">
+    <link rel="icon" href="images/shopping_1162456.png">
+    <meta property="og:url"                content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157"> 
+    <meta property="og:type"               content="website">
+    <meta property="og:title"              content="Slizzlers">
+    <meta property="og:description"        content="A eatery center in Benin City"> 
+    <meta property="og:image"              content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" >
+    <meta name="author" content="John Bright Agbons">
 </head>
+
+
 <body>
-    <h1>Form Submission Confirmation</h1>
-    <p>Thank you for submitting the form.</p>
-    <p>Name: <?php echo isset($_GET['name']) ? $_GET['name'] : ''; ?></p>
-    <p>Email: <?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?></p>
+    <header>
+        <img class="profile-pic" src="images/dp.jpg" alt="My Profile Picture">
+        <h1>John Bright Agbons</h1>
+    </header>
+
+
+    <nav>
+        <div id="menu" class="mobile-menu">
+            <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+        </div>
+
+
+        <div id="mode">
+            ☑️
+        </div>
+        <h1>Dark Mode</h1>
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber">Chamber</a> </li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form">Form</a></li>
+            
+        </ul>
+    </nav>
+
+        <h1>Registration Confirmed</h1>
+
+        <p>Registration Completed. We will get back to you.</p>
+
+
+        
+
+<footer>
+    <p>&copy; 2023 John Bright Agbons, Nigeria </p>
+    <p id="lastModified"> Last Modified: <span id="last-modified-date"></span></p>
+    <p id="current-year"></p>
+</footer>
+
+
+<script src="scripts/getDates.js"></script>
+
+
+   
 </body>
 </html>

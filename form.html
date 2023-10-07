@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/larger.css">
     <link rel="stylesheet" type="text/css" href="styles/form.css">
+
     <link rel="icon" href="images/shopping_1162456.png">
     <meta property="og:url"                content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157"> 
     <meta property="og:type"               content="website">
@@ -49,51 +50,30 @@
         </ul>
     </nav>
     <main>
-        <h2>User Registration</h2>
-        <form id="userRegistrationForm" action="process_form.php" method="POST">
-          <div class="form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Username" name="" required>
-          </div>
 
-          <div class="form">
-          <label for="password">Password:</label>
-          <tr>
-            <td> <input type= "password" placeholder="Password" name="" required>
-          <tr>  
-          </div>
-        
-          <div class="form">
-          <label for="confirm-password">Password:</label>
-          <tr>
-            <td> <input type= "password" placeholder="Password" name="" required>
-          <tr>  
-          </div>
+        <h2 class="user">User Registration</h2>
+        <form method="get" action="record.html">
+            <fieldset>
+                <legend>Registration Detail </legend>
+                <label class="top"> User Name:* <input type="text" id="name" name="username" required></label>
+                <label class="top"> Password:* <input type="password" id="password" name="password" required pattern=".{8,}" title="Eight or more characters"></label>
+                <label class="top" for="password"> Confirm Password:* <input type="password" id="password2" name="confirm-password2" required ></label>
+                <label class="top"> Email:* <input type="email" name="email" placeholder="john02@gmail.com" required title="Please enter a valid email address"></label>
 
-          <div class="form">
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
-              title="Please enter a valid email address ending with @byui.edu">
-          </div>
+            </fieldset>
+            <h5>Rate This:</h5>
 
-          <div class="form">
-            <label for="gender">Gender</label>
-            <td> 
-                <input type="radio" name="Gender"> Male
-                <input type="radio" name="Gender"> Female
-                <tr>
-          
-          <div class="form">
-            <label for="rating">Rate this page:</label>
-            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
-            <output for="rating" id="ratingOutput">5</output>
-          </div>
+            <label class="top" for="rating">Rating:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="">
+            <p id="ratingValue">Current Value:   </p>
 
-          </div>
-      
-          <button type="submit">Submit</button>
+            <input type="submit" value="Click to Register" class="submitBtn" >
         </form>
-      </main>
+        
+
+
+    </main>
+        
 
 <footer>
     <p>&copy; 2023 John Bright Agbons, Nigeria </p>
