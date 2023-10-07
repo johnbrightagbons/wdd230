@@ -1,0 +1,29 @@
+/*.............CSS FOR THANK YOU PAGE................*/
+
+/* CSS for the <main> element */
+main {
+    background-color: #f0f0f0; /* Background color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align the content */
+    align-items: center;
+}
+
+/* CSS for the <h2> element within <main> */
+main h2 {
+    color: #333; /* Text color */
+    font-size: 24px; /* Font size */
+}
+
+/* CSS for the <p> element within <main> */
+main p {
+    color: #666; /* Text color */
+    font-size: 18px; /* Font size */
+    margin: 100px;
+    border: #333;
+    margin-right: 100px;
+}
+
+
+
+
+

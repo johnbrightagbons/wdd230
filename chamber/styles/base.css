@@ -58,7 +58,7 @@ footer {
 
 /* Main Content styles */
 .main-content {
-    background-color: #fff;
+    background-color: rgba(2, 2, 2, 0.5);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -78,7 +78,7 @@ footer {
 }
 /* Set a background color and font styles for the entire page */
 body {
-    background-color: green;
+    background-color: rgb(0, 0, 128, 0.5);
     font-family: Arial, sans-serif;
     font-weight: 200;
 }
@@ -255,6 +255,85 @@ footer {
     font-size: 16px;
     margin-bottom: 5px;
 }
+
+
+/* CSS FOR FORM */
+
+
+/* CSS for the <h1> element within <main> */
+main h1 {
+    margin-top: 2rem; /* Add some top margin to push it down */
+    text-align: center;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #445ba9;
+    border-radius: 10px;
+}
+
+/* CSS for the legend element */
+form legend {
+    color: #445ba9;
+    margin: 0 .1rem;
+    padding: 0 .5rem;
+}
+
+/* CSS for labels and input fields */
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #139c48;
+    font-size: 0.8rem;
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+/* CSS for text input and select fields */
+form label.top input, form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for the submit button */
+form input.submitBtn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.70rem 1.5rem;
+    margin: 2rem auto; /* Center the button vertically and horizontally */
+    display: block; /* Ensure the button takes up the full width */
+    width: 50%; /* Adjust the width as needed */
+    max-width: 20rem;
+    text-align: center; /* Center the text within the button */
+}
+/* CSS for required input fields */
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+/* CSS for valid required input fields */
+form label.top input:required:valid {
+    border: green solid 6px;
+}
+
+
 
 /* Additional styles for specific elements can be added here */
 

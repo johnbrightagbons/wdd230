@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us</title>
     <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="icon" href="images/shopping_1162456.png">
+    <meta property="og:url" content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Benin Chamber of Commerce" />
+    <meta property="og:description" content="Your Gateway to Success in Benin's Business Landscape"  />
+    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" />
+    
 </head>
 <body>
     <header>
@@ -15,9 +22,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discovery">Discovery</a></li>
+                <li><a href="discover.html">Discovery</a></li>
                 <li><a href="directory">Directory</a></li>
-                <li><a href="joinus">Join Us</a></li>
+                <li><a href="join.html">Join Us</a></li>
                 <li><a href="aboutus">About Us</a></li>  
             </ul>
         </nav>
@@ -26,29 +33,39 @@
 <main>
     <h1>Join Us</h1>
     <form action="thankyou.html" method="get">
+        
+        <fieldset>
+            <legend>Applicant information</legend>
+            <label class="top"> First Name:* <input type="text" name="fname" required></label>
+            <label class="top"> Last Name:* <input type="text" name="lname" required></label>
+            <label class="top"> Position:* <input type="text" name="position" id="pstn" pattern="[A-Za-z -]{7,}" title="Please enter a valid title or position (minimum 7 characters)" required></label>
+            <label class="top"> Email: <input type="email" name="email" placeholder="john02@gmail.com"></label>
+            <label class="top"> Phone: <input type="tel" name="phone" placeholder="1234551" ></label>
+            <label class="top"> Business Name*: <input type="text" name="business name" id="buz name" required></label>
+        </fieldset>
+        
 
-        <div class="form">
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" placeholder="First Name" name="firstname" required>
-        </div>
+        <fieldset>
+            <legend>Membership Level</legend>
+            <div>Levels</div>
+            <label class="sbs"><input type="radio" name="Levels" value="NP">NP Membership is for non profit organizations and there is no fee</label>
+            <label class="sbs"> <input type="radio" name="Levels" value="Bronze">Bronze Membership</label>
+            <label class="sbs"><input type="radio" name="Levels" value="Silver">Silver Membership</label>
+            <label class="sbs"><input type="radio" name="Levels" value="Gold">Gold Membership</label>    
+        </fieldset>
 
-        <div class="form">
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" placeholder="Last Name" name="lastname" required>
-        </div>
+        <fieldset>
+            <legend>Business/Organization's  Description</legend>
+        <label class="top"> <textarea id="business_description" name="business_description" rows="4" cols="50"> </textarea> </label>    
+        </fieldset>
 
-        <div class="form">
-            <label for="position">Position:</label>
-            <input type="text" id="position" placeholder="Position" pattern="[a-zA-Z\s-]{7,}" required>
-        </div>
+        <fieldset>
+            <label class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value="">
+        </fieldset>
 
-            <div class="form">
-                <label for="email">Email:</label>
-                <input type="text" id="email" placeholder="e.g john2@gmail.com" name="email" required>
-            </div>
+        
+        <input type="submit" value="Complete the Form" class="submitBtn">
 
-
-    </form>
 </main>
 
 <footer>

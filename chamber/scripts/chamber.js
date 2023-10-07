@@ -32,3 +32,16 @@ localStorage.setItem('lastVisit', currentDate.toISOString());
 
 // Display the visit message
 displayVisitMessage();
+
+// Function to set the current date and time in the "Time Stamp" field
+function setTimestamp() {
+    var timestampField = document.getElementById("timestamp");
+
+    if (timestampField) {
+        var currentDatetime = new Date().toISOString(); // Get the current date and time in ISO format
+        timestampField.value = currentDatetime;
+    }
+}
+
+// Call the setTimestamp function when the document is loaded
+window.addEventListener("load", setTimestamp);
