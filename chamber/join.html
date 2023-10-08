@@ -15,6 +15,7 @@
 </head>
 <body>
     <header>
+        <nav>
         <a id="logo-link" href="index.html">
             <img class="logo-image" src="images/logo.png" alt="Logo of the Benin Chamber of Commerce">
         </a>
@@ -41,7 +42,7 @@
             <label class="top"> Position:* <input type="text" name="position" id="pstn" pattern="[A-Za-z -]{7,}" title="Please enter a valid title or position (minimum 7 characters)" required></label>
             <label class="top"> Email: <input type="email" name="email" placeholder="john02@gmail.com"></label>
             <label class="top"> Phone: <input type="tel" name="phone" placeholder="1234551" ></label>
-            <label class="top"> Business Name*: <input type="text" name="business name" id="buz name" required></label>
+            <label class="top"> Business Name*: <input type="text" name="business name" id="buzname" required></label>
         </fieldset>
         
 
@@ -60,11 +61,12 @@
         </fieldset>
 
         <fieldset>
-            <label class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value="">
+            <label >class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value=""></label>
         </fieldset>
 
         
         <input type="submit" value="Complete the Form" class="submitBtn">
+    </form>
 
 </main>
 
