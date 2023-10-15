@@ -102,3 +102,61 @@ localStorage.setItem('visitCount', visitCount.toString());
             const currentValue = ratingInput.value;
             ratingValue.textContent = `Current Value: ${currentValue}`;
         });
+
+
+        const currentTemp = document.getElementById('current-temp');
+        const weatherDescription = document.getElementById('weather-description');
+        const weatherIcon = document.getElementById('weather-icon');
+        
+        // Construct the API URL with the latitude, longitude, units, and API key
+        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=YourLatitudeHere&lon=YourLongitudeHere&units=imperial&appid=YOUR_API_KEY';
+        
+        // Fetch weather data from the API
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // Extract the temperature, description, and icon from the data
+            const temperature = data.main.temp;
+            const conditionDescription = data.weather[0].description;
+            const conditionIcon = data.weather[0].icon;
+        
+            // Display the weather information in your HTML elements
+            currentTemp.textContent = `Current Temperature: ${temperature}°F`;
+            weatherDescription.textContent = `Condition: ${conditionDescription}`;
+        
+            // Set the weather icon
+            weatherIcon.src = `https://openweathermap.org/img/w/${conditionIcon}.png`;
+            weatherIcon.alt = conditionDescription;
+        
+            // Log the data to the console for further inspection
+            console.log('Weather Data:', data);
+          })
+          .catch((error) => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+
+
+// Fetch the JSON data
+fetch('learningActivities.json')
+  .then((response) => response.json())
+  .then((data) => {
+    const learningActivityList = document.getElementById('learning-activity-list');
+
+    // Iterate through the JSON data and create list items with links
+    data.forEach((activity) => {
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.textContent = activity.title;
+      link.href = activity.url;
+      listItem.appendChild(link);
+      learningActivityList.appendChild(listItem);
+    });
+  })
+  .catch((error) => {
+    console.error('Error fetching JSON data:', error);
+  });

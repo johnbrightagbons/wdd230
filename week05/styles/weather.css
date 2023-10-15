@@ -1,0 +1,111 @@
+/* Apply a basic reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the body with background color and text color */
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif; /* Choose your preferred font-family */
+  }
+  
+  /* Style the header with a background color, text color, and padding */
+  h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the main content area with padding */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the footer with a background color, text color, and padding */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the current temperature and weather description */
+  #current-temp {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* You can choose your preferred text color */
+  }
+  
+  /* Style the weather icon */
+  #weather-icon {
+    max-width: 100px;
+    height: auto;
+    display: block; /* Center the image */
+    margin: 0 auto;
+  }
+  
+  /* Style the weather description */
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555; 
+  }/* Apply a basic reset to remove default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the body with background color and text color */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif; /* Choose your preferred font-family */
+}
+
+/* Style the header with a background color, text color, and padding */
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the main content area with padding */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the footer with a background color, text color, and padding */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the current temperature and weather description */
+#current-temp {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; 
+}
+
+/* Style the weather icon */
+#weather-icon {
+  max-width: 100px;
+  height: auto;
+  display: block; /* Center the image */
+  margin: 0 auto;
+}
+
+/* Style the weather description */
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555; 
+}

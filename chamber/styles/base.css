@@ -333,6 +333,43 @@ form label.top input:required:valid {
     border: green solid 6px;
 }
 
+/* CSS for directory */
+/* Styles for the card view button */
+#grid {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the list view button */
+  #list {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Common styles for both buttons */
+  #grid, #list {
+    transition: background-color 0.3s;
+  }
+  
+  /* Button hover effect */
+  #grid:hover, #list:hover {
+    background-color: #4CAF50;
+  }
+
+
+
 
 
 /* Additional styles for specific elements can be added here */

@@ -45,3 +45,34 @@ function setTimestamp() {
 
 // Call the setTimestamp function when the document is loaded
 window.addEventListener("load", setTimestamp);
+
+
+// Fetch the JSON data from the source (replace 'members.json' with your JSON file's path)
+fetch('members.json')
+  .then((response) => response.json())
+  .then((data) => {
+    const memberContainer = document.getElementById('member-container');
+
+    // Iterate through the member data and create HTML elements for each member
+    data.Members.forEach((member) => {
+      // Create elements for member information
+      const memberCard = document.createElement('div');
+      memberCard.classList.add('member-card'); // You can define CSS styles for member cards
+      const memberName = document.createElement('h2');
+      memberName.textContent = member.name;
+      const memberImage = document.createElement('img');
+      memberImage.src = member.image; // Assuming 'image' is the image URL in your JSON
+      memberImage.alt = member.name;
+      const memberBio = document.createElement('p');
+      memberBio.textContent = member.address; // Assuming 'address' is the address in your JSON
+
+      // Append elements to the member container
+      memberCard.appendChild(memberName);
+      memberCard.appendChild(memberImage);
+      memberCard.appendChild(memberBio);
+      memberContainer.appendChild(memberCard);
+    });
+  })
+  .catch((error) => {
+    console.error('Error fetching JSON data:', error);
+  });
