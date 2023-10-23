@@ -266,6 +266,7 @@ main h1 {
     text-align: center;
 }
 
+
 form {
     max-width: 800px;
     margin: 0 auto;
@@ -368,6 +369,29 @@ form label.top input:required:valid {
     background-color: #4CAF50;
   }
 
+
+  #banner {
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#closeBanner {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
 
 
 

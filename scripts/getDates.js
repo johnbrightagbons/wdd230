@@ -109,7 +109,7 @@ localStorage.setItem('visitCount', visitCount.toString());
         const weatherIcon = document.getElementById('weather-icon');
         
         // Construct the API URL with the latitude, longitude, units, and API key
-        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=YourLatitudeHere&lon=YourLongitudeHere&units=imperial&appid=YOUR_API_KEY';
+        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=YourLatitudeHere&lon=YourLongitudeHere&units=imperial&appid=1386cbabd86fdf3940e7dd018bc851d8';
         
         // Fetch weather data from the API
         fetch(url)
@@ -160,3 +160,92 @@ fetch('learningActivities.json')
   .catch((error) => {
     console.error('Error fetching JSON data:', error);
   });
+
+
+
+
+
+  const apiKey = '1386cbabd86fdf3940e7dd018bc851d8';
+
+  const city = 'Benin';
+  const countryCode = 'NIG';
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
+
+  // Function to fetch and display current weather
+  function fetchCurrentWeather() {
+      $.get(weatherUrl, function (data) {
+          const temperature = data.main.temp;
+          const description = data.weather[0].description;
+          document.getElementById('current-temperature').textContent = `${temperature}°C`;
+          document.getElementById('current-description').textContent = description;
+      });
+  }
+
+  // Function to fetch and display 3-day temperature forecast
+  function fetchTemperatureForecast() {
+      $.get(forecastUrl, function (data) {
+          const forecastList = data.list;
+
+          for (let i = 0; i < 3; i++) {
+              const forecast = forecastList[i];
+              const date = new Date(forecast.dt * 1000);
+              const temperature = forecast.main.temp;
+              document.getElementById(`day-${i + 1}`).textContent = `${date.toDateString()}: ${temperature}°C`;
+          }
+      });
+  }
+
+  fetchCurrentWeather();
+  fetchTemperatureForecast();
+
+
+  // JSON data source (replace with your actual data source)
+  const membersData = {
+    "members": [
+      // Your members' data here...
+    ]
+  };
+
+  // Function to display random spotlight advertisements for silver and gold members
+  function displayRandomSpotlights() {
+    const silverGoldMembers = membersData.members.filter(member =>
+      member.membership_level === "silver" || member.membership_level === "gold"
+    );
+
+    // Shuffle the array to randomize the selection
+    shuffleArray(silverGoldMembers);
+
+    // Select two or three random members
+    const selectedMembers = silverGoldMembers.slice(0, Math.min(3, silverGoldMembers.length));
+
+    // Display the selected members as spotlights
+    const spotlightContainer = document.querySelector(".company-spotlights");
+    spotlightContainer.innerHTML = "";
+
+    selectedMembers.forEach(member => {
+      const spotlight = document.createElement("div");
+      spotlight.classList.add("spotlight");
+      spotlight.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.address}</p>
+        <p>Tel: ${member.phone}</p>
+        <p>${member.description}</p>
+      `;
+      spotlightContainer.appendChild(spotlight);
+    });
+  }
+
+  // Function to shuffle an array (Fisher-Yates shuffle)
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  // Call the function to display random spotlights when the page loads
+  displayRandomSpotlights();
+
+
+  

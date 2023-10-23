@@ -76,3 +76,27 @@ fetch('members.json')
   .catch((error) => {
     console.error('Error fetching JSON data:', error);
   });
+
+
+    // Function to check if today is Monday, Tuesday, or Wednesday
+    function isBannerDay() {
+        const today = new Date();
+        const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
+        return dayOfWeek >= 1 && dayOfWeek <= 3; // Monday (1), Tuesday (2), Wednesday (3)
+      }
+    
+      // Function to close the banner
+      function closeBanner() {
+        const banner = document.getElementById("banner");
+        banner.style.display = "none";
+      }
+    
+      // Check if it's a banner day and show the banner if so
+      if (isBannerDay()) {
+        const banner = document.getElementById("banner");
+        banner.style.display = "block";
+    
+        // Attach a click event listener to the close button
+        const closeBannerButton = document.getElementById("closeBanner");
+        closeBannerButton.addEventListener("click", closeBanner);
+      }

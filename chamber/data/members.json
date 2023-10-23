@@ -6,7 +6,7 @@
         "phone": "070523691523",
         "website": "www.uyiosa.com",
         "image": "chamber/images/uyiosa.webp",
-        "membership": "Manager",
+        "membership level": "Gold",
         "expertise": "Business Administrator"
       },
       {
@@ -15,7 +15,7 @@
         "phone": "09053987562",
         "website": "www.agholeon.com",
         "image": "chamber/images/member01.webp",
-        "membership": "Manager Director",
+        "membership level": "Silver",
         "expertise": "Bank And Financial"
       },
       {
@@ -24,7 +24,7 @@
         "phone": "07038952031",
         "website": "www.uyiosa.com",
         "image": "chamber/images/member02.webp",
-        "membership": "General Manager",
+        "membership level": "Gold",
         "expertise": "Business Administrator"
       },
       {
@@ -34,6 +34,7 @@
         "website": "www.patience.com",
         "image": "chamber/images/member03.webp",
         "membership": "Branch Manager",
+        "membership level": "Gold",
         "expertise": "Financial Advisor"
       },
       {
@@ -43,6 +44,7 @@
         "website": "www.aimufuab.com",
         "image": "chamber/images/blessing.webp",
         "membership": "Sale Manager",
+        "membership level": "Silver",
         "expertise": "Business Administrator"
       },
       {
@@ -52,6 +54,7 @@
         "website": "www.cysolomon.com",
         "image": "chamber/images/cynthia.webp",
         "membership": "Sale Rep",
+        "membership level": "Gold",
         "expertise": "Marketing"
       },
       {
@@ -61,6 +64,7 @@
         "website": "www.johnbright.com",
         "image": "chamber/images/member.webp",
         "membership": "Manager",
+        "membership level": "None",
         "expertise": "Business Administrator"
       }
     ]

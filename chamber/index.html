@@ -13,6 +13,7 @@
     <meta property="og:description" content="Your Gateway to Success in Benin's Business Landscape"  />
     <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    
 </head>
 
 <body>
@@ -26,9 +27,8 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discovery</a></li>
-                <li><a href="directory">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join Us</a></li>
-                <li><a href="about">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -72,9 +72,15 @@
         </ul>
     </section>
 
+    <div id="banner" style="display: none;">
+        <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+        <button id="closeBanner">Close</button>
+    </div>
+
     <section class="weather-card">
         <h2>Weather Forecast</h2>
-        <p>Monday 18 September, 2023, rainy</p>
+        <p id="current-temperature">Loading...</p>
+        <p id="current-weather-description">Loading...</p>
     </section>
 
     <section class="company-spotlights">
@@ -107,7 +113,7 @@
     <footer>
         <p> Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
         <p><a href="joinus.html"> Join Us</a> </p>
-        <p><a href="contactus.html">Contact Us</a></p>
+        
         <div class="social-medias">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
@@ -120,5 +126,7 @@
             </a>
         </div>
     </footer>
+
+<script src="scripts/chamber.js"></script> 
 </body>
 </html>
