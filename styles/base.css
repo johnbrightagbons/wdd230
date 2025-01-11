@@ -1,200 +1,133 @@
-
-/* Common styles for all screen sizes */
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  font-weight: 200;
+  box-sizing: border-box;
 }
 
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Section */
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align content to the left */
-  padding: 20px;
+  background-color: #336699;
+  color: white;
+  padding: 1rem;
 }
 
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
+header img.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
+/* Navigation */
 nav {
-  background: #333;
+  background-color: #222;
+  color: white;
 }
 
 nav ul {
-  list-style-type: none;
-  color: aqua;
-  text-align: center;
-  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-nav a:hover {
-  background-color: rgba(228, 228, 228, 0.2);
+nav ul li a:hover {
+  background-color: #80b9f3;
 }
 
-nav li {
-  display: inline;
-  margin-right: 20px;
+/* Main Section */
+main {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.learning_activity ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.information {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.information input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex: 1 1 calc(50% - 2rem);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 
-.card label {
-  margin-bottom: 5px;
+.card h2 {
+  color: #336699;
+  margin-bottom: 1rem;
 }
 
-.card input {
-  width: 80%;
-}
-
-h3 {
-  width: 200px;
-  height: 10px;
-  background-color: #F0E68C;
-  padding: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 35px;
-}
-
+/* Footer Section */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 100px;
-}
-
-h2 {
-    text-align: center;
-}
-
-main {
-	margin: 0;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	padding: 1rem;
-	width: 760px;
-	background-color: #eee;
-	color: #000;
-}
-
-#mode {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	font-size: 3rem;
-	cursor: pointer;
-}
-
- /* Additional CSS styles for overlay and temple image */
- .hero {
-  position: relative;
-}
-
-.temple-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #336699;
   color: white;
-  padding: 10px;
   text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
 }
 
-/* Additional CSS for the map */
-#map {
-  width: 100%;
-  height: 400px;
+footer #last-modified-date {
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
-
-/* Hide both labels by default */
-.large-label {
-  display: none;
-}
-
- /* Show the mobile label for screens up to 400px wide */
- @media (max-width: 400px) {
-  .large-label {
-      display: none;
+@media (max-width: 767px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    /* Arrange menu items vertically */
+    align-items: center;
+    /* Align menu items to the center */
+    padding: 1rem;
+    /* Add padding around the menu */
+    gap: 0.5rem;
+    /* Add space between menu items */
   }
-  .mobile-label {
-      display: block;
-  }
-}
 
-/* Show the large label for screens between 401px and 960px wide */
-@media (min-width: 401px) and (max-width: 960px) {
-  .large-label {
-      display: block;
-  }
-  .mobile-label {
-      display: none;
+  nav ul li {
+    margin: 0.5rem 0;
+    /* Add vertical spacing between list items */
   }
 }
-/* Media query for small screens (e.g., smartphones and tablets) */
-@media screen and (max-width: 767px) {
-    body {
-      flex-direction: column; /* Make the entire page vertical */
-    }
-  
-    header {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .profile-pic {
-      margin: 0 auto;
-      margin-bottom: 10px;
-    }
-  
-    h1 {
-      margin: 0;
-    }
-  
-    nav ul {
-      flex-direction: column; /* Make the navigation vertical */
-      padding: 0;
-    }
-  
-    nav a {
-      padding: 10px 20px;
-    }
-  
-    .card {
-      flex-direction: column; /* Make the cards vertical */
-      align-items: flex-start;
-      padding: 20px;
-    }
-  
-    .card label {
-      margin-right: 0;
-    }
-  
-    .card input {
-      width: 100%;
-    }
-  }
