@@ -19,7 +19,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  background-color: #336699;
+  background-color: #1a4d80;
   color: white;
   padding: 1rem;
 }
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #80b9f3;
+  background-color: #4a90e2;
 }
 
 /* Main Section */
@@ -103,7 +103,7 @@ main {
 
 /* Footer Section */
 footer {
-  background-color: #336699;
+  background-color: #1a4d80;
   color: white;
   text-align: center;
   padding: 1rem 0;
