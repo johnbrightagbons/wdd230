@@ -30,24 +30,24 @@
     <header>
         <img class="profile-pic" src="images/dp.jpg" alt="My Profile Picture">
         <h1>John Bright Agbons</h1>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
     </header>
 
     <!-- Navigation Section -->
     <nav>
-        <div id="menu" class="mobile-menu">
-            <div class="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <ul>
+        <button id="hamburger" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul id="nav-links" class="navigation hidden">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="chamber">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
         </ul>
     </nav>
+
 
     <!-- Hero Section -->
 
@@ -94,6 +94,7 @@
 
     <!-- Scripts -->
     <script src="scripts/getDates.js"></script>
+
 </body>
 
 </html>

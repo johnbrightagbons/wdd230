@@ -33,32 +33,63 @@ header img.profile-pic {
 
 /* Navigation */
 nav {
-  background-color: #222;
-  color: white;
-}
-
-nav ul {
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
 }
 
-nav ul li {
-  margin: 0 1rem;
+#nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
-  text-decoration: none;
+#nav-links.hidden {
+  display: none;
+}
+
+#nav-links li a {
   color: white;
+  text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-  background-color: #4a90e2;
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Show the hamburger button only on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
 /* Main Section */
@@ -115,21 +146,114 @@ footer #last-modified-date {
   font-size: 0.9rem;
 }
 
-@media (max-width: 767px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    /* Arrange menu items vertically */
-    align-items: center;
-    /* Align menu items to the center */
-    padding: 1rem;
-    /* Add padding around the menu */
-    gap: 0.5rem;
-    /* Add space between menu items */
+/* large view navigation */
+@media (min-width: 768px) {
+  #nav-links {
+    display: flex !important;
   }
 
-  nav ul li {
-    margin: 0.5rem 0;
-    /* Add vertical spacing between list items */
+  .hamburger {
+    display: none;
   }
+}
+
+/* small view navigation */
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "X";
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+  background-color: #333;
+  color: #fff;
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation a:hover {
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+  display: block;
+}
+
+/* large view navigation */
+@media (min-width: 37.5em) {
+  #menu {
+    display: none;
+    /* hide hamburger button */
+  }
+
+  .navigation {
+    flex-direction: row;
+  }
+
+  .navigation a {
+    display: block;
+    flex: 1 1 100%;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.dark-mode header {
+  background-color: #1a4d80;
+}
+
+.dark-mode nav {
+  background-color: #444;
+}
+
+.dark-mode .card {
+  background-color: #444;
+  color: #f9f9f9;
+}
+
+.dark-mode a {
+  color: #4a90e2;
+}
+
+.dark-mode a:hover {
+  background-color: #bbb;
+  color: #333;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
 }
