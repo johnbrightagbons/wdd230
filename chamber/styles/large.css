@@ -1,14 +1,27 @@
-/* Mobile view: Single column layout */
-@media screen and (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr; /* Change to a single column layout */
+/* Larger Screen Styles */
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex;
+        /* Show navigation on larger screens */
     }
-}
 
-/* Apply the hover effect only for larger views */
-@media screen and (min-width: 961px) {
-    .image-gallery figure:hover img {
-        transform: scale(1.1); /* Increase the image size on hover */
-        transition: transform 0.3s ease; /* Add a smooth transition effect */
+    .hamburger {
+        display: none;
+        /* Hide hamburger button */
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 2rem);
+        /* Adjust cards for larger screens */
+    }
+
+    footer {
+        text-align: left;
     }
 }

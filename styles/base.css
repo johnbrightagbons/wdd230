@@ -152,6 +152,7 @@ footer #last-modified-date {
     display: flex !important;
   }
 
+
   .hamburger {
     display: none;
   }
@@ -256,4 +257,7 @@ footer #last-modified-date {
   font-size: 1.5rem;
   cursor: pointer;
   color: white;
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
 }

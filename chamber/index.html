@@ -1,132 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Benin Chamber of Commerce - Your Gateway to Success in Benin's Business Landscape">
-    <title>Benin Chamber Of Commerce</title>
+    <meta name="description"
+        content="Official website for WDD 230 course project by John Bright Agbons. A professional portfolio and chamber of commerce site.">
+    <meta name="author" content="John Bright Agbons">
+    <title>Benin Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
-    <link rel="icon" href="images/shopping_1162456.png">
-    <meta property="og:url" content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Benin Chamber of Commerce" />
-    <meta property="og:description" content="Your Gateway to Success in Benin's Business Landscape"  />
-    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="John Bright Agbons - Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://johnbrightagbons.github.io/wdd230/images/og-image.jpg">
+    <meta property="og:url" content="https://johnbrightagbons.github.io/wdd230/">
+    <meta property="og:description"
+        content="Join the chamber of commerce! Explore current events, weather updates, and featured businesses.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Preview image of the John Bright Agbons Chamber of Commerce site">
+
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-        <div id="logo">
-            <a id="logo-link" href="index.html">
-                <img class="logo-image" src="images/logo.png" alt="Logo of the Benin Chamber of Commerce">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discovery</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join Us</a></li>
-            </ul>
-        </nav>
+        <img class="profile-pic" src="images/logo.jpg" alt="logo">
+        <h1>Benin Chamber of Commerce</h1>
     </header>
 
-    <div id="hero">
-        <div id="hero-box">
-            <img id="hero-image" src="images/hero-image.webp" alt="The hero image">
-        </div>
-        <section id="hero-message">
-            <h1 class="home-title">Empowering Businesses, Transforming Communities</h1>
-            <h4>Your Gateway to Success in Benin's Business Landscape</h4>
-            <p>Welcome to the Benin Chamber of Commerce, where opportunities meet innovation. 
-                Join us in shaping the future of commerce and building a vibrant business ecosystem. 
-                Together, we create prosperity for our members and drive growth for our community.</p>
-        </section>
-    </div>
-
-    <section class="current-events">
-        <h2>Current Events</h2>
-        <ul>
-            <li>
-                <h3>Hosting: Breakfast Session for C Level</h3>
-                <p>The Benin Chamber of Commerce is hosting a breakfast session for C-level executives.</p>
-            </li>
-            <li>
-                <h3>Celebration: Nigeria Independence</h3>
-                <p>The chamber will celebrate Nigeria's independence at MaryLand.</p>
-            </li>
-            <li>
-                <h3>Networking Mixer</h3>
-                <p>Join us for a special networking mixer on October 15th at The Grand Hotel. 
-                This is a fantastic opportunity to connect with fellow business owners, exchange ideas, and expand your 
-                professional network. Don't forget to bring your business cards!</p>
-            </li>
-            <li>
-                <h3>Community Outreach</h3>
-                <p>We believe in giving back to our community. As part of our community outreach initiative, 
-                we will be organizing a charity drive to support local families in need during the upcoming holiday season. 
-                Your generous contributions can make a significant difference.</p>
-            </li>
+    <!-- Navigation Section -->
+    <nav>
+        <button id="hamburger" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul id="nav-links" class="navigation hidden">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="directory.html">Directory</a></li>
         </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero-pic.jpg" alt="Hero Image for the Chamber of Commerce">
+        <section id="hero-msg">
+            <h2>Empowering Local Businesses</h2>
+            <p>Your gateway to business growth and community networking.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </section>
     </section>
 
-    <div id="banner" style="display: none;">
-        <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
-        <button id="closeBanner">Close</button>
-    </div>
+    <!-- Main Content Section -->
+    <main>
+        <!-- Current Events Section -->
+        <section class="current-events card">
+            <h2>Current Events</h2>
+            <p>Check out the latest events happening in City!</p>
+            <ul>
+                <li>Business Networking Gala - January 30, 2025</li>
+                <li>Small Business Expo - February 15, 2025</li>
+                <li>Annual Members’ Meeting - March 10, 2025</li>
+            </ul>
+        </section>
 
-    <section class="weather-card">
-        <h2>Weather Forecast</h2>
-        <p id="current-temperature">Loading...</p>
-        <p id="current-weather-description">Loading...</p>
-    </section>
+        <!-- Weather Card Section -->
+        <section class="weather-card card">
+            <h2>Weather Updates</h2>
+            <p>Stay informed about today's weather:</p>
+            <div id="weather-info">
+                <!-- Placeholder content -->
+                <p>Temperature: 72°F</p>
+                <p>Condition: Partly Cloudy</p>
+            </div>
+        </section>
 
-    <section class="company-spotlights">
-        <h2>Company Spotlights</h2>
-        
-        <div class="spotlight">
-            <h3>Bright Chambers </h3>
-            <p>7, Benin Lagos road</p>
-            <p>Tel: 0915234810</p>
-            <p>Your business success is our top priority. We offer tailored solutions, expert guidance,
-                and a supportive environment to help you thrive in today's competitive market.</p>
-        </div>
+        <!-- Company Spotlights Section -->
+        <section class="company-spotlights card">
+            <h2>Spotlight Businesses</h2>
+            <div class="spotlight">
+                <h3>Bright Tech Solutions</h3>
+                <p>Leading provider of tech solutions in Ring Road, Benin City</p>
+            </div>
+            <div class="spotlight">
+                <h3>Green Valley Farms</h3>
+                <p>Fresh produce delivered directly to your home.</p>
+            </div>
+            <div class="spotlight">
+                <h3>iBright Builders Co.</h3>
+                <p>Your trusted partner for all construction needs.</p>
+            </div>
+        </section>
+    </main>
 
-        <div class="spotlight">
-            <h3>JB and Sons Chambers</h3>
-            <p>24, Upper Mission Road</p>
-            <p>Tel: 0815463924</p>
-            <p>Our commitment to providing top-notch services makes us your ideal choice for all your business needs.</p>
-        </div>
-
-        <div class="spotlight">
-            <h3>Alma Companies</h3>
-            <p>89, Ring Road</p>
-            <p>Tel: 08953217202</p>
-            <p>We are your trusted partner in legal and business matters. With a legacy of excellence, we are here to guide 
-                you every step of the way.</p>
-        </div>
-    </section>
-    
+    <!-- Footer Section -->
     <footer>
-        <p> Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
-        <p><a href="joinus.html"> Join Us</a> </p>
-        
-        <div class="social-medias">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="instagram icon">
-            </a>
-        </div>
+        <p>&copy; 2025 John Bright Agbons | WDD 230 Project</p>
+
+        <a href="join.html">Join</a>
+        <p id="lastModified">Last Modified: <span id="last-modified-date"></span></p>
     </footer>
 
-<script src="scripts/chamber.js"></script> 
+    <!-- JavaScript -->
+    <script src="scripts/chamber.js"></script>
 </body>
+
 </html>
