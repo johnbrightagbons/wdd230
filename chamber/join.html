@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us</title>
+    <meta name="description"
+        content="Official website for WDD 230 course project by John Bright Agbons. A professional portfolio and chamber of commerce site.">
+    <meta name="author" content="John Bright Agbons">
+    <title>Benin Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico" type="favicon">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
-    <link rel="icon" href="images/shopping_1162456.png">
-    <meta property="og:url" content="https://www.tripadvisor.com/LocationPhotos-g298361-Benin_City_Edo_State.html#140680157" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Benin Chamber of Commerce" />
-    <meta property="og:description" content="Your Gateway to Success in Benin's Business Landscape"  />
-    <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/photo-s/08/62/9b/dd/sizzlers.jpg" />
-    
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="John Bright Agbons - Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://johnbrightagbons.github.io/wdd230/images/og-image.jpg">
+    <meta property="og:url" content="https://johnbrightagbons.github.io/wdd230/">
+    <meta property="og:description"
+        content="Join the chamber of commerce! Explore current events, weather updates, and featured businesses.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Preview image of the John Bright Agbons Chamber of Commerce site">
+
 </head>
+
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-        <a id="logo-link" href="index.html">
-            <img class="logo-image" src="images/logo.png" alt="Logo of the Benin Chamber of Commerce">
-        </a>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discovery</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join Us</a></li>
-            </ul>
-        </nav>
+        <img class="profile-pic" src="images/logo.jpg" alt="logo">
+        <h1>Benin Chamber of Commerce</h1>
     </header>
 
-<main>
-    <h1>Join Us</h1>
-    <form action="thankyou.html" method="get">
-        
-        <fieldset>
-            <legend>Applicant information</legend>
-            <label class="top"> First Name:* <input type="text" name="fname" required></label>
-            <label class="top"> Last Name:* <input type="text" name="lname" required></label>
-            <label class="top"> Position:* <input type="text" name="position" id="pstn" pattern="[A-Za-z -]{7,}" title="Please enter a valid title or position (minimum 7 characters)" required></label>
-            <label class="top"> Email: <input type="email" name="email" placeholder="john02@gmail.com"></label>
-            <label class="top"> Phone: <input type="tel" name="phone" placeholder="1234551" ></label>
-            <label class="top"> Business Name*: <input type="text" name="business name" id="buzname" required></label>
-        </fieldset>
-        
+    <!-- Navigation Section -->
+    <nav>
+        <button id="hamburger" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul id="nav-links" class="navigation hidden">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
 
-        <fieldset>
-            <legend>Membership Level</legend>
-            <div>Levels</div>
-            <label class="sbs"><input type="radio" name="Levels" value="NP">NP Membership is for non profit organizations and there is no fee</label>
-            <label class="sbs"> <input type="radio" name="Levels" value="Bronze">Bronze Membership</label>
-            <label class="sbs"><input type="radio" name="Levels" value="Silver">Silver Membership</label>
-            <label class="sbs"><input type="radio" name="Levels" value="Gold">Gold Membership</label>    
-        </fieldset>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero-pic.jpg" alt="Hero Image for the Chamber of Commerce">
+        <section id="hero-msg">
+            <h2>Empowering Local Businesses</h2>
+            <p>Your gateway to business growth and community networking.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </section>
+    </section>
 
-        <fieldset>
-            <legend>Business/Organization's  Description</legend>
-        <label class="top"> <textarea id="business_description" name="business_description" rows="4" cols="50"> </textarea> </label>    
-        </fieldset>
 
-        <fieldset>
-            <label class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value=""></label>
-        </fieldset>
+    <main>
+        <h1>Join Us</h1>
+        <form action="thankyou.html" method="get">
 
-        
-        <input type="submit" value="Complete the Form" class="submitBtn">
-    </form>
+            <fieldset>
+                <legend>Applicant information</legend>
+                <label class="top"> First Name:* <input type="text" name="fname" required></label>
+                <label class="top"> Last Name:* <input type="text" name="lname" required></label>
+                <label class="top"> Position:* <input type="text" name="position" id="pstn" pattern="[A-Za-z -]{7,}"
+                        title="Please enter a valid title or position (minimum 7 characters)" required></label>
+                <label class="top"> Email: <input type="email" name="email" placeholder="john02@gmail.com"></label>
+                <label class="top"> Phone: <input type="tel" name="phone" placeholder="1234551"></label>
+                <label class="top"> Business Name:* <input type="text" name="business name" id="buzname"
+                        required></label>
+            </fieldset>
 
-</main>
 
-<footer>
-    <p> Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
+            <fieldset>
+                <legend>Membership Level</legend>
+                <div>Levels</div>
+                <label class="sbs"><input type="radio" name="Levels" value="NP">NP Membership is for non profit
+                    organizations and there is no fee</label>
+                <label class="sbs"> <input type="radio" name="Levels" value="Bronze">Bronze Membership</label>
+                <label class="sbs"><input type="radio" name="Levels" value="Silver">Silver Membership</label>
+                <label class="sbs"><input type="radio" name="Levels" value="Gold">Gold Membership</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business/Organization's Description</legend>
+                <label class="top"> <textarea id="business_description" name="business_description" rows="4"
+                        cols="50"> </textarea> </label>
+            </fieldset>
+
+            <fieldset>
+                <label class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value=""></label>
+            </fieldset>
+
+
+            <input type="submit" value="Complete the Form" class="submitBtn">
+        </form>
+
+    </main>
+
+    <footer>
+        <p> Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
         <p><a href="joinus"> Join Us</a> </p>
-        
+
         <div class="social-medias">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
@@ -84,6 +116,7 @@
                 <img src="images/instagram.png" alt="instagram icon">
             </a>
         </div>
-</footer>
+    </footer>
 </body>
+
 </html>
