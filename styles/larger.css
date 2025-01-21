@@ -5,6 +5,7 @@
     }
 
     main {
+        display: flex;
         justify-content: space-between;
     }
 
@@ -12,11 +13,25 @@
         order: 2;
     }
 
+    /* Ensure learning activity and information sections span equally */
+    .learning_activity,
+    .information {
+        flex: 1;
+        margin: 0 1rem;
+    }
+
+    /* Move map section before footer in large view */
+    .map-container {
+        order: 3;
+        width: 100%;
+    }
+
     footer {
         position: relative;
         bottom: 0;
         left: 0;
         width: 100%;
+        order: 4;
     }
 
     .hero .overlay {
@@ -40,5 +55,12 @@
     /* Show small-screen text on small screens */
     .overlay .small-screen {
         display: block;
+    }
+}
+
+@media (min-width: 961px) {
+    .hero img {
+        width: 100%;
+        height: auto;
     }
 }
