@@ -57,21 +57,20 @@ hamburgerButton.addEventListener("click", () => {
 });
 
 
-// Check if the visit count is stored in localStorage
-let visitCount = localStorage.getItem('visitCount');
+// Get reference to the visit counter element
+const visitCounterElement = document.getElementById('visit-counter');
 
-// If visitCount is null (first visit), initialize it to 1, otherwise increment it
-if (visitCount === null) {
-  visitCount = 1;
-} else {
-  visitCount = parseInt(visitCount) + 1;
-}
+// Retrieve the visit count from localStorage (or default to 0)
+let visitCount = localStorage.getItem('visitCount') || 0;
 
-// Update the visit count display
-document.getElementById('visit-count').textContent = visitCount;
+// Increment the visit count
+visitCount++;
 
-// Store the updated visit count in localStorage
-localStorage.setItem('visitCount', visitCount.toString());
+// Update the visit counter element
+visitCounterElement.textContent = `You have visited this page ${visitCount} times`;
+
+// Save the updated visit count back to localStorage
+localStorage.setItem('visitCount', visitCount);
 
 
 // Get references to the elements

@@ -18,4 +18,27 @@
         left: 0;
         width: 100%;
     }
+
+    .hero .overlay {
+        font-size: 1rem;
+    }
+}
+
+/* Hide small-screen text by default */
+.overlay .small-screen {
+    display: none;
+}
+
+/* Show appropriate text based on screen size */
+@media (max-width: 640px) {
+
+    /* Hide large-screen text on small screens */
+    .overlay .large-screen {
+        display: none;
+    }
+
+    /* Show small-screen text on small screens */
+    .overlay .small-screen {
+        display: block;
+    }
 }

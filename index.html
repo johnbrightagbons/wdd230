@@ -51,6 +51,22 @@
 
 
     <!-- Hero Section -->
+    <section class="hero">
+        <picture>
+            <!-- Source for large screens -->
+            <source srcset="images/aba-temple.webp" media="(min-width: 961px)">
+            <!-- Source for small screens -->
+            <source srcset="images/ghana-temple.webp" media="(max-width: 640px)">
+            <!-- Default image -->
+            <img src="images/aba-temple.webp" alt="Aba Nigeria Temple" loading="lazy" width="960" height="400">
+        </picture>
+        <div class="overlay">
+            <!-- Text for large screens -->
+            <h2 class="large-screen">Aba, Nigeria Temple</h2>
+            <!-- Text for small screens -->
+            <h2 class="small-screen">Ghana Temple</h2>
+        </div>
+    </section>
 
     <!-- Main Section -->
     <h1>WDD 230: Web Frontend Development</h1>
@@ -83,10 +99,24 @@
                 <label for="weather">Weather:</label>
                 <input type="text" id="weather" name="weather" placeholder="Enter weather information">
 
-                <label for="visits">Number of Visits to the Page:</label>
-                <input type="number" id="visits" name="visits" placeholder="Enter number of visits">
+                <label for="visits">
+                    <p id="visit-counter">
+                        <span id="visits">0</span> visits to this page.
+
             </section>
         </div>
+
+        <!-- Map Section -->
+        <section class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.073292073073!2d7.370073314769073!3d5.117978396058073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106d8b1b1b1b1b1b%3A0x7b1b1b1b1b1b1b1b!2sAba%20Nigeria%20Temple!5e0!3m2!1sen!2sng!4v1626823660001!5m2!1sen!2sng"
+                width="960" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </section>
+
+
+
+
     </main>
 
     <!-- Footer Section -->
