@@ -1,39 +1,129 @@
+/* General body styles */
+body {
+  margin: 0;
+  /* Remove default margin */
+  font-family: Arial, sans-serif;
+  /* Set font for the page */
+  line-height: 1.6;
+  /* Improve text readability */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Align items vertically */
+  align-items: center;
+  /* Center content horizontally */
+  background-color: #f4f4f4;
+  /* Light gray background for the page */
+}
+
+/* Header styles */
 h1 {
-    text-align: center;
-    background-color:steelblue;
-    margin-bottom: 0px;
+  text-align: center;
+  /* Center align the header text */
+  background-color: seagreen;
+  /* Set background color for the header */
+  color: white;
+  /* White text color */
+  padding: 10px;
+  /* Add padding for spacing inside the header */
+  margin: 0;
+  /* Remove default margin */
 }
 
+/* Main container styles */
 main {
-    margin: 0 auto;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Align items vertically */
+  align-items: center;
+  /* Center content horizontally */
+  padding: 20px;
+  /* Add spacing around the main content */
 }
 
-
+/* Image gallery container */
 .pictures {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    background-color: steelblue;
-    animation: fade 15s ;
-    align-items: center;
+  width: 100%;
+  /* Allow full width */
+  max-width: 400px;
+  /* Set a maximum width for the images */
+  display: flex;
+  /* Use flexbox to manage image layout */
+  flex-direction: column;
+  /* Stack images vertically */
+  align-items: center;
+  /* Center images horizontally */
 }
 
-footer {
-    background-color: seagreen;
-    text-align: center;
-    margin-bottom: -50px;   
-    margin-top: -16px; 
+/* Individual image container (figure) */
+figure {
+  margin: 0;
+  /* Remove default margin */
+  margin-bottom: 20px;
+  /* Add spacing between images */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Stack image and caption vertically */
+  align-items: center;
+  /* Center content horizontally */
 }
 
+/* Image styles */
+img {
+  width: 100%;
+  /* Make images responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Prevent inline spacing issues */
+  border-radius: 5px;
+  /* Slightly round the image corners */
+  animation: fade 10s;
+  /* Apply fade-in animation */
+  margin-top: 3rem;
+  /*Add spaces between each pictures*/
+}
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* Start with zero opacity */
-    }
-    100% {
-      opacity: 1; /* End with full opacity */
-    }
+/* Fade-in animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    /* Gradually make the image fully visible */
   }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+/* Image caption styles */
+figcaption {
+  margin-top: 2px;
+  /* Add spacing between the image and caption */
+  font-size: 1.3rem;
+  /* Set a smaller font size for the caption */
+  color: seagreen;
+  /* Dark gray color for better readability */
+  text-align: center;
+  /* Center-align the caption */
+  text-decoration: solid;
+
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  /* Center-align the text */
+  background-color: seagreen;
+  /* Set a green background color */
+  color: white;
+  /* White text color for contrast */
+  padding: 10px;
+  /* Add padding for spacing inside the footer */
+  width: 100%;
+  /* Stretch the footer across the full width */
+  margin-top: 20px;
+  /* Add spacing above the footer */
+}

@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazy Loading</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development John Bright Agbons course assignment portal">
+    <meta name="author" content="John Bright Agbons">
+    <title>Lazy Load Assignment</title>
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles/lazyload.css">
+
+
+    <!-- Open Graph Meta Properties -->
+    <meta property="og:title" content="John Bright Agbons - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://johnbrightagbons.github.io/wdd230/images/og-image.jpg">
+    <meta property="og:url" content="https://johnbrightagbons.github.io/wdd230/">
+    <meta property="og:description"
+        content="Course portal for WDD 230 - Web Frontend Development by John Bright Agbons.">
+    <meta property="og:site_name" content="John Bright Agbons - WDD 230 Portal">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Preview of John Bright Agbons - WDD 230 Web Development Course Portal">
+
 </head>
+
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Lazy Load Images with CSS Animation</h1>
+        <h1>Lazy Loady Animations</h1>
+
     </header>
 
     <main class="pictures">
         <picture>
             <img src="images/agbons.webp" loading="lazy" width="400" height="600">
-            <figcaption>A picture of Agbons</figcaption>
+            <figcaption>John, Bright Agbons</figcaption>
         </picture>
 
         <picture>
             <img src="images/bright.webp" loading="lazy" width="400" height="600">
-            <figcaption>A picture of Bright</figcaption>
+            <figcaption>John, Bright Agbons</figcaption>
         </picture>
 
         <picture>
             <img src="images/igbinosa.webp" loading="lazy" width="400" height="600">
-            <figcaption>A picture of Igbinosa</figcaption>
+            <figcaption>Aimufua Igbinosa Kelly</figcaption>
         </picture>
 
         <picture>
             <img src="images/john.webp" loading="lazy" width="400" height="600">
-            <figcaption>A picture of John</figcaption>
+            <figcaption>John, Bright Agbons</figcaption>
         </picture>
 
         <picture>
             <img src="images/kelly.webp" loading="lazy" width="400" height="600">
-            <figcaption>A picture of Kelly</figcaption>
+            <figcaption>Aimufua Igbinosa Kelly</figcaption>
         </picture>
 
         <picture>
@@ -48,9 +68,9 @@
     <footer>
         <p>&copy; 2023 John Bright Agbons, Nigeria </p>
         <p id="lastModified"> Last Modified: <span id="last-modified-date"></span></p>
-        <p id="current-year"></p>
     </footer>
 
     <script src="scripts/lazyload.js"></script>
 </body>
+
 </html>
