@@ -188,68 +188,114 @@ main {
 
 /*=======================================================================================
 /* Discover Page Grid Layout */
+/* Discover Page Grid Layout */
 .discover-layout {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    /* Sidebar takes 1 fraction, gallery takes 3 */
+    gap: 50px;
     padding: 20px;
 }
 
 /* Sidebar Styles */
 .sidebar {
     background-color: #f7f7f7;
+    /* Light gray background for clarity */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for elevation */
 }
 
+/* Sidebar Headings */
 .sidebar h2,
 .sidebar h3 {
     margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    /* Dark gray for better readability */
 }
 
+/* Sidebar List */
 .sidebar ul {
     list-style-type: none;
     padding-left: 0;
+    /* Remove default list padding */
 }
 
 .sidebar ul li {
     margin: 5px 0;
+    /* Add spacing between items */
+    font-size: 1rem;
+    /* Standard text size */
+    color: #555;
+    /* Medium gray */
 }
 
-/* Gallery Styles */
+/* Image Gallery Styles */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive columns */
     gap: 15px;
+    /* Space between images */
 }
 
 .image-gallery figure {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow around images */
 }
 
 .image-gallery img {
     display: block;
     width: 100%;
+    /* Full-width responsive images */
     height: auto;
+    /* Maintain aspect ratio */
     transition: transform 0.3s ease-in-out;
+    /* Smooth zoom on hover */
 }
 
 .image-gallery figure:hover img {
     transform: scale(1.1);
+    /* Slight zoom on hover */
 }
 
 /* Lazy-loading Fade-in Effect */
-.lazy {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+
+/* Image styles */
+img {
+    width: 100%;
+    /* Make images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Prevent inline spacing issues */
+    border-radius: 5px;
+    /* Slightly round the image corners */
+    animation: fade 10s;
+    /* Apply fade-in animation */
+    margin-top: 3rem;
+    /*Add spaces between each pictures*/
 }
 
-.lazy-loaded {
-    opacity: 1;
+
+/* Fade-in animation */
+@keyframes fade {
+    0% {
+        opacity: 0;
+        /* Gradually make the image fully visible */
+    }
+
+    100% {
+        opacity: 100;
+    }
 }
+
 
 
 
