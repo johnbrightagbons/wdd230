@@ -58,54 +58,60 @@
         </section>
     </section>
 
+    <!-- Main Content -->
+    <main class="discover-layout">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h2>Welcome Back!</h2>
+            <p id="visit-message">Loading visit message...</p>
+            <section>
+                <h3>Events & Highlights</h3>
+                <ul>
+                    <li>Benin Cultural Festival</li>
+                    <li>Local Business Expo 2025</li>
+                    <li>Chamber Networking Night</li>
+                </ul>
+            </section>
+        </aside>
 
-    <main>
-        <h1>Join Us</h1>
-        <form action="thankyou.html" method="get">
+        <div class="image-gallery">
+            <h2>Local Photos of Interest</h2>
+            <!-- Image 1 -->
+            <figure>
+                <img src="images/photo-01.webp" alt="Local Photo 1" loading="lazy">
+            </figure>
 
-            <fieldset>
-                <legend>Applicant information</legend>
-                <label class="top"> First Name:* <input type="text" name="fname" required></label>
-                <label class="top"> Last Name:* <input type="text" name="lname" required></label>
-                <label class="top"> Position:* <input type="text" name="position" id="pstn" pattern="[A-Za-z -]{7,}"
-                        title="Please enter a valid title or position (minimum 7 characters)" required></label>
-                <label class="top"> Email: <input type="email" name="email" placeholder="john02@gmail.com"></label>
-                <label class="top"> Phone: <input type="tel" name="phone" placeholder="1234551"></label>
-                <label class="top"> Business Name:* <input type="text" name="business name" id="buzname"
-                        required></label>
-            </fieldset>
+            <!-- Image 2 -->
+            <figure>
+                <img src="images/photo-02.webp" alt="Local Photo 2" loading="lazy">
+            </figure>
 
+            <!-- Image 3 -->
+            <figure>
+                <img src="images/photo-03.webp" alt="Local Photo 3" loading="lazy">
+            </figure>
 
-            <fieldset>
-                <legend>Membership Level</legend>
-                <div>Levels</div>
-                <label class="sbs"><input type="radio" name="Levels" value="NP">NP Membership is for non profit
-                    organizations and there is no fee</label>
-                <label class="sbs"> <input type="radio" name="Levels" value="Bronze">Bronze Membership</label>
-                <label class="sbs"><input type="radio" name="Levels" value="Silver">Silver Membership</label>
-                <label class="sbs"><input type="radio" name="Levels" value="Gold">Gold Membership</label>
-            </fieldset>
+            <!-- Image 4 -->
+            <figure>
+                <img src="images/photo-04.webp" alt="Local Photo 4" loading="lazy">
+            </figure>
 
-            <fieldset>
-                <legend>Business/Organization's Description</legend>
-                <label class="top"> <textarea id="business_description" name="business_description" rows="4"
-                        cols="50"> </textarea> </label>
-            </fieldset>
+            <!-- Image 5 -->
+            <figure>
+                <img src="images/photo-05.webp" alt="Local Photo 5" loading="lazy">
+            </figure>
 
-            <fieldset>
-                <label class="top">Time Stamp: <input type="hidden" id="timestamp" name="timestamp" value=""></label>
-            </fieldset>
-
-
-            <input type="submit" value="Complete the Form" class="submitBtn">
-        </form>
-
+            <!-- Image 6 -->
+            <figure>
+                <img src="images/photo-06.webp" alt="Local Photo 6" loading="lazy">
+            </figure>
+        </div>
     </main>
 
     <footer>
         <p> Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
         <p><a href="joinus"> Join Us</a> </p>
-
+        <p id="lastModified">Last Modified: <span id="last-modified-date"></span></p>
         <div class="social-medias">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
@@ -118,6 +124,10 @@
             </a>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/visitTrack.js"></script>
 </body>
 
 </html>

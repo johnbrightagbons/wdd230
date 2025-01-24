@@ -1,7 +1,8 @@
 /* Large Screen Styles */
 @media (min-width: 768px) {
     nav ul {
-        justify-content: flex-start;
+        justify-content: center;
+        /* Center the navigation menu */
     }
 
     main {
@@ -67,4 +68,128 @@
 
 .map-container iframe {
     width: 100%;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+#hero-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.image-gallery {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.image-gallery h2 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.image-gallery figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/* Dark mode toggle button (for large screens) */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    /* Change to absolute position */
+    top: 1rem;
+    /* Align to the top */
+    right: 1rem;
+    /* Align to the right */
+    z-index: 1000;
+    /* Ensure it stays on top */
+}
+
+/* Navigation menu (for large screens) */
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex;
+        /* Ensure the menu is visible */
+        /* Horizontal layout */
+        justify-content: center;
+        /* Center the navigation links */
+        align-items: center;
+        position: relative;
+        /* Place the menu in a fixed position */
+        top: 50%;
+        /* Center vertically */
+    }
+
+    /* Remove hamburger menu button for larger screens */
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Dark mode toggle button (top-right for large screens) */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    /* Place it at the top-right corner */
+    top: 2.5rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+/* Navigation menu (horizontally centered for large screens) */
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex;
+        /* Ensure horizontal layout */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Vertically align items within the nav */
+        margin: 0 auto;
+        /* Center the nav container within its parent */
+        gap: 1.5rem;
+        /* Add spacing between nav links */
+        position: relative;
+        /* Allow it to stay in natural flow at the top */
+    }
+
+    .hamburger {
+        display: none;
+        /* Hide hamburger menu on large screens */
+    }
 }

@@ -184,6 +184,76 @@ main {
     color: #336699;
 }
 
+
+
+/*=======================================================================================
+/* Discover Page Grid Layout */
+.discover-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2,
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 0;
+}
+
+/* Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.image-gallery figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery figure:hover img {
+    transform: scale(1.1);
+}
+
+/* Lazy-loading Fade-in Effect */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
+
+
+
+
 /* Footer Section */
 footer {
     background-color: #1a4d80;
