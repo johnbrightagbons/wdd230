@@ -188,7 +188,6 @@ main {
 
 /*=======================================================================================
 /* Discover Page Grid Layout */
-/* Discover Page Grid Layout */
 .discover-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -260,6 +259,17 @@ main {
     /* Smooth zoom on hover */
 }
 
+.image-gallery figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    /* Spacing between the image and caption */
+    font-style: italic;
+}
+
+
+
 .image-gallery figure:hover img {
     transform: scale(1.1);
     /* Slight zoom on hover */
@@ -281,6 +291,8 @@ img {
     /* Apply fade-in animation */
     margin-top: 3rem;
     /*Add spaces between each pictures*/
+    filter: drop-shadow(5px);
+    transition: filter 0.3s ease-in-out;
 }
 
 
@@ -299,23 +311,77 @@ img {
 
 
 
-
 /* Footer Section */
+
 footer {
     background-color: #1a4d80;
+    /* Dark blue background */
     color: white;
+    /* White text color */
     text-align: center;
-    padding: 1rem 0;
-}
-
-a {
-    color: #f9f9f9;
-}
-
-footer #last-modified-date {
-    font-style: italic;
+    /* Center all text and elements */
+    padding: 3rem 1rem;
+    /* Space inside the footer */
+    line-height: 1.6;
+    /* Better readability */
     font-size: 0.9rem;
+    /* Slightly smaller text size */
 }
+
+footer p {
+    margin: 0.5rem 0;
+    /* Add space between paragraphs */
+}
+
+footer a {
+    color: #ffc107;
+    /* Yellow color for links */
+    text-decoration: none;
+    /* Remove underline by default */
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffeb3b;
+    /* Brighter yellow on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+.social-medias {
+    margin-top: -2rem;
+    /* Space above social media links */
+    display: block;
+    justify-content: center;
+    /* Center icons horizontally */
+    gap: 1rem;
+    /* Space between icons */
+}
+
+.social-medias a {
+    display: inline-block;
+    width: 32px;
+    /* Icon width */
+    height: 32px;
+    /* Icon height */
+}
+
+.social-medias img:hover {
+    filter: brightness(1);
+    /* Brighten icons on hover */
+}
+
+
+#lastModified {
+    margin-top: 0.5rem;
+    /* Space above the last modified section */
+    font-size: 0.8rem;
+    /* Slightly smaller text size for metadata */
+    color: #ddd;
+}
+
+/*
+
 
 /* Dark Mode */
 .dark-mode {

@@ -265,9 +265,10 @@ footer #last-modified-date {
 }
 
 /* =======================================================================*/
+
 /* Dark mode styles with improved contrast */
 .dark-mode {
-  background-color: #333;
+  background-color: gray;
   /* Darker for better contrast */
   color: #f0f0f0;
   /* Lighter text for readability */
