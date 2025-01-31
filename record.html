@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/larger.css">
-    <link rel="stylesheet" type="text/css" href="styles/form.css">
 
     <!-- Open Graph Meta Properties -->
     <meta property="og:title" content="John Bright Agbons - WDD 230 - Web Frontend Development">
@@ -68,29 +67,13 @@
             <h2 class="small-screen">Ghana Temple</h2>
         </div>
     </section>
+    <main class="message">
+        <h1>Registration Confirmed</h1>
 
+        <p>Registration Completed. We will get back to you.</p>
 
-    <main>
-        <form method="get" action="record.html" id="registration-form">
-            <h2 class="user">User Registration</h2>
-            <fieldset>
-                <legend>Registration Detail</legend>
-                <label class="top"> User Name:* <input type="text" id="name" name="username" required></label>
-                <label class="top"> Password:* <input type="password" id="password" name="password" required
-                        pattern="[A-Za-z -]{7,}" title="Please enter a valid password"></label>
-                <label class="top" for="password"> Confirm Password:* <input type="password" id="password2"
-                        name="confirm-password2" required></label>
-                <label class="top"> Email:* <input type="email" name="email" placeholder="john02@gmail.com" required
-                        title="Please enter a valid email address"></label>
-
-            </fieldset>
-            <h5>Rate This:</h5>
-            <label class="top" for="rating">Rating:</label>
-            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5">
-            <p id="ratingValue">Current Value: 5</p>
-            <input type="submit" value="Click to Register" class="submitBtn">
-        </form>
     </main>
+
 
     <footer>
         <p>&copy; 2023 John Bright Agbons, Nigeria </p>
@@ -98,8 +81,11 @@
         <p id="current-year"></p>
     </footer>
 
-    <script src="scripts/form.js"></script>
+
     <script src="scripts/getDates.js"></script>
+
+
+
 </body>
 
 </html>

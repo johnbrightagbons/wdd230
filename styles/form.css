@@ -1,71 +1,334 @@
 /*...................................FORM...................*/
-form fieldset {
-  margin: 2rem 0;
-  border: 1px solid #445ba9;
-  border-radius: 10px;
-  padding: .5rem 2%;
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-form legend {
-  color: #445ba9;
-  margin: 0 .2rem;
-  padding: 0 .5rem;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-form label.top, form div {
-  display: block;
-  padding-top: 1rem;
-  color: #9c2c13;
-  font-size: .8rem;
-}
-
-form label.top input, form label.top select {
--webkit-appearance: none;
-display: block;
-font-size: 1rem;
-border: solid 1px #999;
-border-radius: 4px;
-padding: .75rem;
-color: #555;
-width: 100%;
-max-width: 20rem;
-background-color: rgba(0, 0, 0, 0.1);
-}
-
-form input.submitBtn {
-  border: none;
-  background-color: #9c2c13;
+/* Header Section */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #1a4d80;
   color: white;
-  border-radius: 1rem;
-  padding: .75rem 1.5rem;
-  margin: 0 0 2rem 2%;
-  width: 96%;
-  max-width: 20rem;
+  padding: 1rem;
 }
 
-form label.top input:required {
-border-left: red solid 6px;  
+header img.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 18rem;
 }
 
-form label.top input:required:valid {
-  border: green solid 6px;
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
 }
 
-.user {
-  text-align: left;
-  margin: 0 0 1rem 1%;
+#nav-links {
+  list-style-type: none;
+  display: none;
+  /* Default: hidden for mobile */
+  gap: 15px;
+
 }
 
-/*...............Large............*/
+/* Add this new class to handle the display of nav links when hamburger is clicked */
+#nav-links.show {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-@media only screen and (min-width:38rem) {
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav-links li a:hover {
+  color: #1a4d80;
+  /* Change text color on hover */
+  text-decoration: #336699;
+  /* Add underline on hover */
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  /* Set the hero section to relative positioning */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  /* Position the text content over the image */
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Ensure it is exactly centered */
+  text-align: center;
+  color: white;
+  /* Ensure the text is readable on the image */
+  z-index: 10;
+  /* Put the text in front of the image */
+  padding: 1rem;
+  width: 100%;
+  /* Make sure the content container spans the width of the image */
+}
+
+/* Styling for the Heading */
+#hero-msg {
+  font-size: 1em;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  /* Space between heading and paragraph */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -370px;
+}
+
+/* Styling for the Paragraph */
+.hero p,
+h2 {
+  color: rgba(5, 10, 20, 25.1);
+  text-decoration: solid
+}
+
+/*================== Form Styling ===================*/
+form {
+  background: #ffffff;
+  /* White background for contrast */
+  padding: 1.5rem;
+  /* Add space inside form */
+  border-radius: 10px;
+  /* Smooth rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  max-width: 600px;
+  /* Set a maximum width */
+  margin: 2rem auto;
+  /* Center the form horizontally and add vertical margin */
+}
+
+/*================== Fieldset Styling ===================*/
+fieldset {
+  border: 1px solid #ccc;
+  /* Light gray border */
+  border-radius: 8px;
+  /* Rounded edges */
+  margin-bottom: 1.5rem;
+  /* Space between fieldsets */
+  padding: 1rem;
+  /* Inner spacing */
+}
+
+fieldset legend {
+  font-size: 1.2rem;
+  /* Bigger font for title */
+  font-weight: bold;
+  /* Emphasize title */
+  color: #333;
+  /* Neutral text color */
+  padding: 0 0.5rem;
+  /* Space around text */
+}
+
+/*================== Label Styling ===================*/
+label.top {
+  display: block;
+  /* Force labels above inputs */
+  font-weight: bold;
+  /* Make labels stand out */
+  margin-bottom: 0.5rem;
+  /* Space below label */
+  color: #444;
+  /* Slightly darker text */
+}
+
+/* Labels for radio buttons */
+label.sbs {
+  display: block;
+  /* Stack vertically */
+  margin: 0.5rem 0;
+  /* Space between options */
+  font-size: 1rem;
+  /* Standard text size */
+  color: #555;
+  /* Slightly muted text */
+}
+
+/*================== Input & Textarea Styling ===================*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+  width: 100%;
+  /* Full-width inputs */
+  padding: 0.8rem;
+  /* Comfortable padding */
+  font-size: 1rem;
+  /* Readable text size */
+  border: 1px solid #ccc;
+  /* Subtle border */
+  border-radius: 5px;
+  /* Rounded corners */
+  margin-bottom: 1rem;
+  /* Space below inputs */
+  background: #f9f9f9;
+  /* Light background */
+}
+
+/* Required fields have a left red border */
+input[required],
+textarea[required] {
+  border-left: 4px solid red;
+  /* Highlight required fields */
+  padding-left: 10px;
+  /* Space for the red line */
+  box-sizing: border-box;
+  /* Maintain spacing */
+}
+
+/* Styling for focus states */
+input:focus,
+textarea:focus {
+  border-color: #1a4d80;
+  /* Blue highlight */
+  outline: none;
+  /* Remove default outline */
+  background-color: #eef7ff;
+  /* Light blue background on focus */
+}
+
+textarea {
+  resize: vertical;
+  /* Allow only vertical resizing */
+}
+
+/*================== Password Input Specific Styling ===================*/
+input[type="password"] {
+  font-family: Arial, sans-serif;
+  /* Ensure readable dots */
+  letter-spacing: 0.1rem;
+  /* Slight space between dots */
+}
+
+/*================== Range Input (Rating) Styling ===================*/
+input[type="range"] {
+  width: 100%;
+  /* Full width */
+  cursor: pointer;
+  /* Make it clickable */
+}
+
+p#ratingValue {
+  font-size: 1rem;
+  /* Readable text */
+  color: #333;
+  /* Neutral color */
+  font-weight: bold;
+  /* Make value stand out */
+  text-align: center;
+  /* Center align text */
+}
+
+/*================== Submit Button Styling ===================*/
+.submitBtn {
+  display: block;
+  /* Block element for centering */
+  margin: 1rem auto;
+  /* Auto margin centers button */
+  padding: 0.8rem 2rem;
+  /* Proper padding for a button */
+  font-size: 1.2rem;
+  /* Bigger text for emphasis */
+  font-weight: bold;
+  /* Make text bold */
+  color: #fff;
+  /* White text for contrast */
+  background-color: #09427a;
+  /* Dark blue professional color */
+  border: none;
+  /* Remove default border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Indicate interactivity */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.submitBtn:hover {
+  background-color: #336699;
+  /* Lighter blue on hover */
+}
+
+/*================== Responsive Design for Small Screens ===================*/
+@media (max-width: 768px) {
   main {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
+    padding: 1rem;
+    /* Reduce padding on small screens */
   }
 
-main h2 {
-  grid-column: 1 / span 2;
+  .submitBtn {
+    width: 100%;
+    /* Full-width button for better UX */
+    padding: 1rem;
+    /* Adjust padding for touch experience */
+  }
 }
-}
-

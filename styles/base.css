@@ -86,9 +86,10 @@ nav {
   }
 
   #nav-links {
-    flex-direction: column;
+    display: block;
     gap: 10px;
     align-items: center;
+
   }
 }
 
@@ -209,9 +210,10 @@ footer #last-modified-date {
   position: absolute;
   top: 1rem;
   right: 1rem;
+
 }
 
-#menu::before {
+j #menu::before {
   content: "☰";
 }
 
@@ -230,7 +232,7 @@ footer #last-modified-date {
 
 .navigation a {
   display: none;
-  padding: 1rem;
+  padding: 0.1rem;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -310,6 +312,7 @@ footer #last-modified-date {
 /* Buttons and links with improved contrast */
 button,
 .dark-mode-toggle {
+  display: absolute;
   background-color: #4a4a4a;
   /* Dark background for contrast */
   color: #ffffff;

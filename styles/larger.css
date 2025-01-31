@@ -5,6 +5,87 @@
         /* Center the navigation menu */
     }
 
+    /* Default state: Hide navigation menu on small screens */
+    @media (max-width: 768px) {
+        #nav-links {
+            display: none;
+            /* Initially hidden */
+            flex-direction: column;
+            /* Stack items vertically */
+            align-items: center;
+            /* Center items horizontally */
+            justify-content: center;
+            /* Center items vertically */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Semi-transparent background */
+            width: 100vw;
+            /* Full width */
+            height: 100vh;
+            /* Full screen height */
+            position: fixed;
+            /* Cover the screen */
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+            /* Ensure it's above other elements */
+        }
+
+        /* Show menu when active */
+        #nav-links.active {
+            display: flex;
+            text-align: center;
+        }
+
+        /* Style individual menu items */
+        #nav-links li {
+            padding: 15px;
+            width: 100%;
+            list-style: none;
+            /* Remove bullet points */
+        }
+
+        /* Style the links inside the menu */
+        #nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            /* Increase font size */
+            display: block;
+        }
+
+        /* Hamburger button styling */
+        .hamburger {
+            display: flex;
+            /* Show on small screens */
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1100;
+            /* Ensure it's above the menu */
+        }
+
+        /* Styling the three bars in the hamburger button */
+        .hamburger .bar {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+
+    /* Show menu when the 'hidden' class is removed */
+    @media (max-width: 768px) {
+        #nav-links:not(.hidden) {
+            display: flex;
+        }
+    }
+
     main {
         display: flex;
         justify-content: space-between;
@@ -38,6 +119,36 @@
     .hero .overlay {
         font-size: 1rem;
     }
+}
+
+/* Center the main element on the page */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 2rem;
+    /* Add padding */
+    max-width: 1200px;
+    /* Set a maximum width */
+}
+
+/* Center the message in the HTML */
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 2rem;
+    /* Add padding */
+    max-width: 800px;
+    /* Set a maximum width */
+    text-align: center;
+    /* Center text */
 }
 
 /* Hide small-screen text by default */
@@ -127,8 +238,8 @@
     cursor: pointer;
     color: white;
     position: absolute;
-    /* Change to absolute position */
-    top: 1rem;
+    /* Ensure it stays fixed when scrolling */
+    top: 3rem;
     /* Align to the top */
     right: 1rem;
     /* Align to the right */
@@ -145,7 +256,7 @@
         justify-content: center;
         /* Center the navigation links */
         align-items: center;
-        position: relative;
+        position: fixed;
         /* Place the menu in a fixed position */
         top: 50%;
         /* Center vertically */
@@ -155,20 +266,6 @@
     .hamburger {
         display: none;
     }
-}
-
-/* Dark mode toggle button (top-right for large screens) */
-.dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    /* Place it at the top-right corner */
-    top: 2.5rem;
-    right: 1rem;
-    z-index: 1000;
 }
 
 /* Navigation menu (horizontally centered for large screens) */
