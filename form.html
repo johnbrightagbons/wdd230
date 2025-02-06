@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 230 - Web Frontend Development John Bright Agbons course assignment portal">
+    <meta name="description" content="John Bright Agbons' WDD 230 Web Frontend Development course assignment portal.">
     <meta name="author" content="John Bright Agbons">
     <title>John Bright Agbons - WDD 230 - Web Frontend Development</title>
     <link rel="icon" href="images/favicon.ico">
@@ -76,12 +76,18 @@
             <fieldset>
                 <legend>Registration Detail</legend>
                 <label class="top"> User Name:* <input type="text" id="name" name="username" required></label>
-                <label class="top"> Password:* <input type="password" id="password" name="password" required
-                        pattern="[A-Za-z -]{7,}" title="Please enter a valid password"></label>
-                <label class="top" for="password"> Confirm Password:* <input type="password" id="password2"
-                        name="confirm-password2" required></label>
-                <label class="top"> Email:* <input type="email" name="email" placeholder="john02@gmail.com" required
-                        title="Please enter a valid email address"></label>
+                <label class="top"> Password:*
+                    <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}"
+                        title="Please enter a valid password with at least 8 alphanumeric characters">
+                </label>
+                <label class="top" for="password"> Confirm Password:*
+                    <input type="password" id="password2" name="confirm-password2" required>
+                    <span id="password-error" style="color: red;"></span>
+                </label>
+                <label class="top"> Email:*
+                    <input type="email" name="email" placeholder="john02@byui.edu" required
+                        pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid byui.edu email address">
+                </label>
 
             </fieldset>
             <h5>Rate This:</h5>
