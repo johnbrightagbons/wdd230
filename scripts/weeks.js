@@ -100,3 +100,32 @@ function displayLinks(weeks) {
 }
 
 getLinks(); // Call the getLinks function to initiate the process
+
+fetch('data/members.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('memberCardsContainer');
+    container.innerHTML = ''; // Clear previous content
+
+    data.Members.forEach(member => {
+      const div = document.createElement('div');
+      div.classList.add('member-card');
+      div.innerHTML = `
+                <img src="${member.image}" alt="${member.name}">
+                <h3>${member.name}</h3>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Membership Level:</strong> ${member['membership level']}</p>
+                <p><strong>Expertise:</strong> ${member.expertise}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+            `;
+      container.appendChild(div);
+    });
+  })
+  .catch(error => console.error('Error:', error));
+
+document.getElementById('toggleButton').addEventListener('click', function () {
+  const container = document.getElementById('memberCardsContainer');
+  container.classList.toggle('grid');
+  container.classList.toggle('list');
+});

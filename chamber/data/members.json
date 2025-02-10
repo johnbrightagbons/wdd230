@@ -1,71 +1,71 @@
 {
-    "Members": [
-      {
-        "name": "Uyiosa Richmond",
-        "address": "5, Uyiosa Street Off Upper Sokponba Road",
-        "phone": "070523691523",
-        "website": "www.uyiosa.com",
-        "image": "chamber/images/uyiosa.webp",
-        "membership level": "Gold",
-        "expertise": "Business Administrator"
-      },
-      {
-        "name": "Agho Leon Junoir",
-        "address": "55, Uyi Street Off Upper Sokponba Road",
-        "phone": "09053987562",
-        "website": "www.agholeon.com",
-        "image": "chamber/images/member01.webp",
-        "membership level": "Silver",
-        "expertise": "Bank And Financial"
-      },
-      {
-        "name": "Omonuwa Otamere",
-        "address": "101, Erediauwa Road, Off Sapele Road",
-        "phone": "07038952031",
-        "website": "www.uyiosa.com",
-        "image": "chamber/images/member02.webp",
-        "membership level": "Gold",
-        "expertise": "Business Administrator"
-      },
-      {
-        "name": "Osadiaye Patience",
-        "address": "Ugbor, GRA",
-        "phone": "09085694786",
-        "website": "www.patience.com",
-        "image": "chamber/images/member03.webp",
-        "membership": "Branch Manager",
-        "membership level": "Gold",
-        "expertise": "Financial Advisor"
-      },
-      {
-        "name": "Blessing Aimufua",
-        "address": "450 Sapele Road",
-        "phone": "07055748274",
-        "website": "www.aimufuab.com",
-        "image": "chamber/images/blessing.webp",
-        "membership": "Sale Manager",
-        "membership level": "Silver",
-        "expertise": "Business Administrator"
-      },
-      {
-        "name": "Solomon Cythian",
-        "address": "5, Upper Siluko Road, Benin City",
-        "phone": "070559278914",
-        "website": "www.cysolomon.com",
-        "image": "chamber/images/cynthia.webp",
-        "membership": "Sale Rep",
-        "membership level": "Gold",
-        "expertise": "Marketing"
-      },
-      {
-        "name": "John Bright Agbons",
-        "address": "27, Independence street, Off Upper Sokponba Road",
-        "phone": "09067938153",
-        "website": "www.johnbright.com",
-        "image": "chamber/images/member.webp",
-        "membership": "Manager",
-        "membership level": "None",
-        "expertise": "Business Administrator"
-      }
-    ]
-  }
+  "Members": [
+    {
+      "name": "Uyiosa Richmond",
+      "address": "5, Uyiosa Street Off Upper Sokponba Road",
+      "phone": "070523691523",
+      "website": "www.uyiosa.com",
+      "image": "chamber/images/member03.webp",
+      "membership level": "Gold",
+      "expertise": "Business Administrator"
+    },
+    {
+      "name": "Agho Leon Junoir",
+      "address": "55, Uyi Street Off Upper Sokponba Road",
+      "phone": "09053987562",
+      "website": "www.agholeon.com",
+      "image": "chamber/images/member01.webp",
+      "membership level": "Silver",
+      "expertise": "Bank And Financial"
+    },
+    {
+      "name": "Omonuwa Otamere",
+      "address": "101, Erediauwa Road, Off Sapele Road",
+      "phone": "07038952031",
+      "website": "www.otamere.com",
+      "image": "chamber/images/member02.webp",
+      "membership level": "Gold",
+      "expertise": "Business Administrator"
+    },
+    {
+      "name": "Osadiaye Patience",
+      "address": "Ugbor, GRA",
+      "phone": "09085694786",
+      "website": "www.patience.com",
+      "image": "chamber/images/member03.webp",
+      "membership": "Branch Manager",
+      "membership level": "Gold",
+      "expertise": "Financial Advisor"
+    },
+    {
+      "name": "Blessing Aimufua",
+      "address": "450 Sapele Road",
+      "phone": "07055748274",
+      "website": "www.aimufuab.com",
+      "image": "chamber/images/blessing.webp",
+      "membership": "Sale Manager",
+      "membership level": "Silver",
+      "expertise": "Business Administrator"
+    },
+    {
+      "name": "Solomon Cythian",
+      "address": "5, Upper Siluko Road, Benin City",
+      "phone": "070559278914",
+      "website": "www.cysolomon.com",
+      "image": "chamber/images/cynthia.webp",
+      "membership": "Sale Rep",
+      "membership level": "Gold",
+      "expertise": "Marketing"
+    },
+    {
+      "name": "John Bright Agbons",
+      "address": "27, Independence street, Off Upper Sokponba Road",
+      "phone": "09067938153",
+      "website": "www.johnbright.com",
+      "image": "chamber/images/member.webp",
+      "membership": "Manager",
+      "membership level": "None",
+      "expertise": "Business Administrator"
+    }
+  ]
+}
