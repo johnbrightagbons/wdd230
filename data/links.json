@@ -1,69 +1,72 @@
 {
     "weeks": [
         {
-            "week": "week 1",
+            "week": "Week 1",
             "links": [
                 {
-                    "url":"week01/holygrail.html",
-                    "title":"Week 01 Assignment"
+                    "url": "week01/holygrail.html",
+                    "title": "Week 01 Assignment"
                 },
                 {
-                    "url":"week02/design.html",
-                    "title":"Week 02 Assignment"
-                },
-                {
-                    "url":"week03/images/landscape.webp",
-                    "title":"WebP"
-                },
-                {
-                    "url":"week02/bom.html",
-                    "title":"Book Of Mormon Chapters"
-                },
-                {
-                    "url":"week03/reponsive-images.html",
-                    "title":"Reponsive Images"
-                },
-                {
-                    "url":"week03/bom.html",
-                    "title":"Book Of Mormon Revisit"
-                },
-                {
-                    "url":"https://codepen.io/Bright-Agbons-John/pen/LYMebGx",
-                    "title":"Assignment"
-                },
-                {
-                    "url":"https://codepen.io/Bright-Agbons-John/pen/PoXdjxJ",
-                    "title":"CSS Pseudo-class"
-                },
-                {
-                    "url":"week04/images/Screenshot .png",
-                    "title":"CSS Pseudo-class Screenshot"
-                },
-                {
-                    "url":"week04/tablebuild.html",
-                    "title":"Table"
-                },
-                {
-                    "url":"form-start/index.html",
-                    "title":"Developed Form Activity"
-                },
-                {
-                    "url":"https://codepen.io/Bright-Agbons-John/pen/WNLPROvhttps://codepen.io/Bright-Agbons-John/pen/WNLPROvhttps://codepen.io/Bright-Agbons-John/pen/WNLPROv",
-                    "title":"CSS Pseudo Element"
-                },
-                {
-                    "url":"week05/new-ward-members.json",
-                    "title":"JSON file"
-                },
-                {
-                    "url":"week05/prophets.html",
-                    "title":"Prophets Card"
-                },
-                {
-                    "url":"week05/weather.html",
-                    "title":"Weather"
+                    "url": "week02/bom.html",
+                    "title": "Book Of Mormon Chapters"
                 }
-                
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Week 02 Assignment"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/images/landscape.webp",
+                    "title": "WebP"
+                },
+                {
+                    "url": "week03/reponsive-images.html",
+                    "title": "Reponsive Images"
+                },
+                {
+                    "url": "week03/bom.html",
+                    "title": "Book Of Mormon Revisit"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "week04/images/Screenshot .png",
+                    "title": "CSS Pseudo-class Screenshot"
+                },
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "Table"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "week05/new-ward-members.json",
+                    "title": "JSON file"
+                },
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Prophets Card"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Weather"
+                }
             ]
         }
     ]

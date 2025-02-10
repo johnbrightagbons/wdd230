@@ -20,7 +20,7 @@ header {
   display: flex;
   align-items: center;
   background-color: #1a4d80;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 1rem;
 }
 
@@ -79,6 +79,52 @@ nav {
   border-radius: 5px;
 }
 
+/* Learning Activities Section */
+.learning-activities {
+  list-style: none;
+  /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Space between list items */
+}
+
+.learning-activities li {
+  background-color: #eee;
+  /* Light grey background */
+  padding: 8px;
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  /* Dark text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the links inside the learning activities */
+.learning-activities a {
+  color: blue;
+  /* Blue links */
+  text-decoration: none;
+  font-weight: normal;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.learning-activities a:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+  /* Light blue hover effect */
+  text-decoration: underline;
+}
+
+
+
 /* Show the hamburger button only on small screens */
 @media (max-width: 768px) {
   .hamburger {
@@ -101,15 +147,14 @@ main {
   flex-wrap: wrap;
 }
 
-.learning_activity ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+
 
 .information {
   font-weight: bold;
   margin-bottom: 0.4rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .information input {
@@ -188,6 +233,46 @@ footer #last-modified-date {
   font-style: italic;
   font-size: 0.9rem;
 }
+
+
+.hero {
+  position: relative;
+  /* Allows absolute positioning of overlay */
+  overflow: hidden;
+  /* Ensures the overlay does not spill out */
+}
+
+.overlay {
+  position: absolute;
+  bottom: -1px;
+  /* Positions the text at the bottom */
+  left: 0;
+  right: 0;
+  text-align: center;
+  /* Centers the text */
+  color: rgb(2, 8, 61);
+  /* Dark blue color */
+}
+
+.large-screen,
+.small-screen {
+  margin: 0;
+  /* Remove default margin */
+  font-weight: bold;
+  /* Make text bold */
+}
+
+@media (min-width: 961px) {
+  .hero .large-screen {
+    display: block;
+  }
+
+  .hero .small-screen {
+    display: none;
+  }
+}
+
+
 
 /* large view navigation */
 @media (min-width: 768px) {

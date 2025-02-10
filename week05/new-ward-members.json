@@ -1,6 +1,6 @@
 {
     "familyName": "John",
-    "moveInDate": "10-10-20122",
+    "moveInDate": "10-10-2012",
     "numberOfPeople": "5",
     "BishopricVisit": "Yes",
     "familyMembers": [
@@ -9,25 +9,21 @@
             "gender": "Male",
             "birthDate": "23-10-1988"
         },
-
         {
             "name": "John Mary",
             "gender": "Female",
             "birthDate": "2-01-1990"
         },
-
         {
             "name": "John Bright Jnr",
             "gender": "Male",
             "birthDate": "23-10-1999"
         },
-
         {
             "name": "John Bridget",
             "gender": "Female",
             "birthDate": "23-11-2001"
         },
-
         {
             "name": "John Best",
             "gender": "Male",
