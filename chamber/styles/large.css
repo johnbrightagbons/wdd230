@@ -1,27 +1,104 @@
-/* Larger Screen Styles */
+/* Tablet Styles - Navigation Layout */
 @media (min-width: 768px) {
+
+    /* Main Navigation Links */
     #nav-links {
         display: flex;
-        /* Show navigation on larger screens */
+        gap: 2rem;
+        padding: 1rem;
+        justify-content: flex-end;
+        background-color: #1a1a1a;
+        /* Consistent with base.css */
     }
 
+
+
+    /* Ensure Hamburger Menu is Hidden */
     .hamburger {
         display: none;
-        /* Hide hamburger button */
     }
 
+
+    /* Main Content Layout */
     main {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: #ffffff;
+        /* Ensure consistent background */
+    }
+
+
+
+    /* Card Component Styling */
+    .card {
+        margin: 0;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+    }
+
+
+    .image-gallery {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+        padding: 2rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem;
+    }
+
+
+    .image-gallery {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
         gap: 2rem;
     }
 
-    .card {
-        flex: 1 1 calc(50% - 2rem);
-        /* Adjust cards for larger screens */
-    }
 
     footer {
-        text-align: left;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3rem;
     }
+
+    .hero img {
+        max-height: 600px;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+    main {
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        max-width: 1600px;
+        padding: 4rem;
+    }
+
+
+    .image-gallery {
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        gap: 2.5rem;
+    }
+
 }

@@ -8,16 +8,19 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #ffffff;
+    color: #222222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Section */
 header {
     display: flex;
     align-items: center;
-    background-color: #1a4d80;
-    color: white;
+    background-color: #08067e;
+    color: #ffffff;
     padding: 1rem;
 }
 
@@ -28,44 +31,62 @@ header img.profile-pic {
     margin-right: 18rem;
 }
 
-/* Navigation */
+/* Navigation - Primary Navigation Menu */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #1a1a1a;
+    /* Darker background for better contrast */
+    color: #ffffff;
 }
 
+
+/* Navigation Links - Hidden by default for mobile */
 #nav-links {
     list-style-type: none;
     display: none;
-    /* Default: hidden for mobile */
     gap: 15px;
-
 }
 
-/* Add this new class to handle the display of nav links when hamburger is clicked */
+/* Show navigation links on larger screens */
+@media (min-width: 768px) {
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0 2rem;
+    }
+}
+
+
 #nav-links.show {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Navigation Link Styles */
 #nav-links li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-#nav-links li a:hover {
-    color: #1a4d80;
-    /* Change text color on hover */
-    text-decoration: #336699;
-    /* Add underline on hover */
+/* Hover and Active States */
+#nav-links li a:hover,
+#nav-links li a:focus {
+    background-color: #333333;
+    color: #ffffff;
+    outline: 2px solid #ffffff;
 }
 
+
+/* Hamburger Menu - Visible only on mobile */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -73,7 +94,16 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.5rem;
 }
+
+/* Hide hamburger on larger screens */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
 
 .hamburger .bar {
     width: 25px;
@@ -92,6 +122,14 @@ nav {
 
 .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Hero Section */
@@ -185,617 +223,116 @@ main {
 }
 
 
-
-/*=======================================================================================
-/* Discover Page Grid Layout */
-.discover-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Sidebar takes 1 fraction, gallery takes 3 */
-    gap: 50px;
-    padding: 20px;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    background-color: #f7f7f7;
-    /* Light gray background for clarity */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for elevation */
-}
-
-/* Sidebar Headings */
-.sidebar h2,
-.sidebar h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #333;
-    /* Dark gray for better readability */
-}
-
-/* Sidebar List */
-.sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
-    /* Remove default list padding */
-}
-
-.sidebar ul li {
-    margin: 5px 0;
-    /* Add spacing between items */
-    font-size: 1rem;
-    /* Standard text size */
-    color: #555;
-    /* Medium gray */
-}
-
-/* Image Gallery Styles */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* Responsive columns */
-    gap: 15px;
-    /* Space between images */
-}
-
-.image-gallery figure {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow around images */
-}
-
-.image-gallery img {
-    display: block;
-    width: 100%;
-    /* Full-width responsive images */
-    height: auto;
-    /* Maintain aspect ratio */
-    transition: transform 0.3s ease-in-out;
-    /* Smooth zoom on hover */
-}
-
-.image-gallery figcaption {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 5px;
-    /* Spacing between the image and caption */
-    font-style: italic;
-}
-
-
-
-.image-gallery figure:hover img {
-    transform: scale(1.1);
-    /* Slight zoom on hover */
-}
-
-/* Lazy-loading Fade-in Effect */
-
-/* Image styles */
-img {
-    width: 100%;
-    /* Make images responsive */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Prevent inline spacing issues */
-    border-radius: 5px;
-    /* Slightly round the image corners */
-    animation: fade 10s;
-    /* Apply fade-in animation */
-    margin-top: 3rem;
-    /*Add spaces between each pictures*/
-    filter: drop-shadow(5px);
-    transition: filter 0.3s ease-in-out;
-}
-
-
-/* Fade-in animation */
-@keyframes fade {
-    0% {
-        opacity: 0;
-        /* Gradually make the image fully visible */
-    }
-
-    100% {
-        opacity: 100;
-    }
-}
-
-/**** Directory CSS ****/
+/* Directory Section */
 .menu {
     margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
     background-color: #bed;
     text-align: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 .menu button {
-    padding: 1rem;
-    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #0055aa;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #1a4d80;
 }
 
 /* Grid View */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
 .grid .member-card {
     text-align: center;
     background-color: #fff;
-    padding: 15px;
+    padding: 2rem;
     border-radius: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .grid .member-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
+
 
 /* List View */
 .list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem;
 }
 
 .list .member-card {
-    display: flex;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 10px;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #fff;
     border-radius: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .list .member-card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
-
-
 
 
 /* Footer Section */
-
 footer {
-    background-color: #1a4d80;
-    /* Dark blue background */
-    color: white;
-    /* White text color */
+    background-color: #08067e;
+    color: #ffffff;
     text-align: center;
-    /* Center all text and elements */
-    padding: 3rem 1rem;
-    /* Space inside the footer */
+    padding: 2rem 1rem;
     line-height: 1.6;
-    /* Better readability */
     font-size: 0.9rem;
-    /* Slightly smaller text size */
-}
-
-footer p {
-    margin: 0.5rem 0;
-    /* Add space between paragraphs */
-}
-
-footer a {
-    color: #ffc107;
-    /* Yellow color for links */
-    text-decoration: none;
-    /* Remove underline by default */
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #ffeb3b;
-    /* Brighter yellow on hover */
-    text-decoration: underline;
-    /* Add underline on hover */
-}
-
-.social-medias {
-    margin-top: -2rem;
-    /* Space above social media links */
-    display: block;
-    justify-content: center;
-    /* Center icons horizontally */
-    gap: 1rem;
-    /* Space between icons */
-}
-
-.social-medias a {
-    display: inline-block;
-    width: 32px;
-    /* Icon width */
-    height: 32px;
-    /* Icon height */
-}
-
-.social-medias img:hover {
-    filter: brightness(1);
-    /* Brighten icons on hover */
-}
-
-
-#lastModified {
-    margin-top: 0.5rem;
-    /* Space above the last modified section */
-    font-size: 0.8rem;
-    /* Slightly smaller text size for metadata */
-    color: #ddd;
-}
-
-/*
-
-
-/* Dark Mode */
-.dark-mode {
-    background-color: #333;
-    color: #f9f9f9;
-}
-
-.dark-mode header {
-    background-color: #1a4d80;
-}
-
-.dark-mode nav {
-    background-color: #444;
-}
-
-.dark-mode .card {
-    background-color: #444;
-    color: #f9f9f9;
-}
-
-.dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-}
-
-.hidden {
-    display: none;
-}
-
-
-
-/* Main Section Styling */
-main {
-    font-family: Arial, sans-serif;
-    /* Clean and readable font */
-    background-color: #f9f9f9;
-    /* Light background for the main container */
-    padding: 2rem;
-    /* Padding for spacing around the content */
-    max-width: 800px;
-    /* Restrict width for better readability */
-    margin: 2rem auto;
-    /* Center align the main section */
-    border-radius: 10px;
-    /* Rounded corners for a modern design */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-}
-
-/* Heading Styling */
-main h1 {
-    text-align: center;
-    /* Center align the heading */
-    font-size: 2.5rem;
-    /* Large and bold heading size */
-    color: #1a4d80;
-    /* Professional dark blue color */
-    margin-bottom: 1.5rem;
-    /* Spacing below the heading */
-}
-
-/*================== Form Styling ===================*/
-form {
-    background: #ffffff;
-    /* White background for better contrast */
-    padding: 1.5rem;
-    /* Padding inside the form */
-    border-radius: 10px;
-    /* Rounded corners for modern design */
-}
-
-/* Fieldset Styling */
-fieldset {
-    border: 1px solid #ccc;
-    /* Subtle border for grouping */
-    border-radius: 8px;
-    /* Rounded corners */
-    margin-bottom: 1.5rem;
-    /* Spacing between fieldsets */
-    padding: 1rem;
-    /* Padding inside each fieldset */
-}
-
-fieldset legend {
-    font-size: 1.2rem;
-    /* Slightly larger font for fieldset titles */
-    font-weight: bold;
-    /* Make the text bold */
-    color: #333;
-    /* Neutral dark color for text */
-    padding: 0 0.5rem;
-    /* Padding around the legend text */
-}
-
-/* Label Styling */
-label.top {
-    display: block;
-    /* Ensure labels are above their inputs */
-    font-weight: bold;
-    /* Highlight labels */
-    margin-bottom: 0.5rem;
-    /* Space below labels */
-    color: #444;
-    /* Neutral text color */
-}
-
-label.sbs {
-    display: block;
-    /* Arrange radio options vertically */
-    margin: 0.5rem 0;
-    /* Add spacing between radio buttons */
-    font-size: 1rem;
-    /* Standard font size */
-    color: #555;
-    /* Neutral text color for radio options */
-}
-
-input[type="radio"] {
-    margin-right: 0.5rem;
-    /* Add space between the radio button and the text */
-}
-
-/* Input and Textarea Styling */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    /* Make inputs span the full width */
-    padding: 0.8rem;
-    /* Add padding for better UX */
-    font-size: 1rem;
-    /* Standard font size */
-    border: 1px solid #ccc;
-    /* Subtle border for visibility */
-    border-radius: 5px;
-    /* Rounded corners */
-    margin-bottom: 1rem;
-    /* Space below inputs */
-    background: #f9f9f9;
-}
-
-/* Light background for inputs */
-/* Add a vertical red line for required input fields */
-input[required] {
-    border-left: 4px solid red;
-    /* Adds a red vertical line inside the field */
-    padding-left: 10px;
-    /* Ensures text does not overlap with the line */
-    box-sizing: border-box;
-    /* Maintains proper box model for padding and borders */
-}
-
-/* Add a consistent style for required textareas */
-textarea[required] {
-    border-left: 4px solid red;
-    padding-left: 10px;
-    box-sizing: border-box;
-}
-
-
-input:focus,
-textarea:focus {
-    border-color: #1a4d80;
-    /* Highlight border on focus */
-    outline: none;
-    /* Remove default outline */
-    background-color: #eef7ff;
-    /* Subtle background change on focus */
-}
-
-textarea {
-    resize: vertical;
-    /* Allow vertical resizing only */
-
-}
-
-/* Submit Button Styling */
-.submitBtn {
-    display: block;
-    /* Ensure button respects padding and centering */
-    margin: 1rem auto;
-    /* Center align the button */
-    padding: 0.8rem 2rem;
-    /* Sufficient padding for visibility */
-    font-size: 1.2rem;
-    /* Slightly larger font for emphasis */
-    font-weight: bold;
-    /* Make text bold */
-    color: #fff;
-    /* White text for contrast */
-    background-color: #09427a;
-    /* Professional dark blue background */
-    border: none;
-    /* Remove default border */
-    border-radius: 5px;
-    /* Rounded corners for modern design */
-    cursor: pointer;
-    /* Pointer cursor for interactivity */
-    transition: background-color 0.3s ease;
-    /* Smooth hover effect */
-}
-
-.submitBtn:hover {
-    background-color: #336699;
-    /* Lighter blue on hover */
+    margin-top: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        padding: 1rem;
-        /* Adjust padding for smaller screens */
-    }
-
-    .submitBtn {
-        width: 100%;
-        /* Make the button span full width */
-        padding: 1rem;
-        /* Adjust padding for better touch experience */
-    }
-}
-
-
-
-
-/* Contact Form Section Styling */
-.contact-form-section {
-    background-color: #f4f4f9;
-    padding: 3rem 1.5rem;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.contact-form-section h2 {
-    font-size: 2.5rem;
-    color: #1a4d80;
-    margin-bottom: 1.5rem;
-}
-
-/* Form Styling */
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Individual Form Group Styling */
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: #f9f9f9;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #1a4d80;
-    outline: none;
-    background: #eef7ff;
-}
-
-/* Button Styling */
-.submit-btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #1a4d80;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #336699;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-form-section {
-        padding: 2rem 1rem;
-    }
-
-    #contact-form {
-        padding: 1.5rem;
-    }
-
-    .submit-btn {
-        width: 100%;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-form-section {
-        padding: 2rem 1rem;
-        /* Adjust padding for smaller screens */
-    }
-
-    #contact-form {
-        padding: 1.5rem;
-        /* Reduce padding for smaller viewports */
-    }
-
-    .submit-btn {
-        width: 100%;
-        /* Make the button span full width on small screens */
-    }
-}
-
-
-
-
-@media (min-width: 768px) {
-    nav {
-        justify-content: center;
-        /* Centralize the navigation bar */
-    }
-
-    #nav-links {
-        display: flex;
-        /* Display the navigation links on large screens */
-        justify-content: center;
-        /* Centralize the navigation links */
-        gap: 30px;
-        /* Add spacing between the links */
-    }
-
-    .hamburger {
-        display: none;
-        /* Hide the hamburger menu on large screens */
+    .menu button {
+        margin: 0.25rem 0;
     }
 }
