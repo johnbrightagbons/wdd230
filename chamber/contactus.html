@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Official website for WDD 230 course project by John Bright Agbons. A professional portfolio and chamber of commerce site.">
+    <meta name="author" content="John Bright Agbons">
+    <title>Benin Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+    <link rel="stylesheet" type="text/css" href="styles/contactus.css">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="John Bright Agbons - Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://johnbrightagbons.github.io/wdd230/images/og-image.jpg">
+    <meta property="og:url" content="https://johnbrightagbons.github.io/wdd230/">
+    <meta property="og:description"
+        content="Join the chamber of commerce! Explore current events, weather updates, and featured businesses.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Preview image of the John Bright Agbons Chamber of Commerce site">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <img class="profile-pic" src="images/logo.jpg" alt="logo">
+        <h1>Benin Chamber of Commerce</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <button id="hamburger" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul id="nav-links" class="navigation hidden">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discovery.html">Discovery</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero-pic.jpg" alt="Hero Image for the Chamber of Commerce">
+        <section id="hero-msg">
+            <h2>Empowering Local Businesses</h2>
+            <p>Your gateway to business growth and community networking.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </section>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:*</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:*</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
+        <p><a href="joinus">Join Us</a></p>
+        <p id="lastModified">Last Modified: <span id="last-modified-date"></span></p>
+        <div class="social-medias">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Visit our Facebook page" width="32" height="32" loading="lazy">
+
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Visit our Twitter page" width="32" height="32" loading="lazy">
+
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Visit our Instagram page" width="32" height="32" loading="lazy">
+
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/visitTrack.js"></script>
+</body>

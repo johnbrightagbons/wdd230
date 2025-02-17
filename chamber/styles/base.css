@@ -336,3 +336,154 @@ footer {
         margin: 0.25rem 0;
     }
 }
+
+
+/*Banner Styling*/
+.banner {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.banner button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Basic styling for the spotlight container and spotlight elements */
+#spotlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the spotlights */
+    gap: 20px;
+    /* Add some spacing between spotlights */
+    padding: 20px;
+}
+
+.spotlight {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    /* Or adjust to your desired width */
+    text-align: center;
+    border-radius: 8px;
+    /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow */
+}
+
+.spotlight h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.spotlight p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.spotlight a {
+    display: inline-block;
+    /* Allows for padding and margins */
+    padding: 8px 15px;
+    background-color: #007bff;
+    /* Or choose a different color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.spotlight a:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+
+/* Basic styling for Events Page */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.current-events ul {
+    list-style: none;
+    padding: 3px;
+}
+
+.current-events li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    color: #08067e;
+}
+
+.attendance {
+    margin-top: 5px;
+}
+
+.attendance button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.attendance {
+    margin: 20px;
+    /* Optional for spacing */
+}
+
+.attend-no {
+    background-color: red;
+    /* Sets the background color to red */
+    color: white;
+    /* Makes the text color white for better contrast */
+    border: none;
+    /* Removes any border */
+    padding: 10px 20px;
+    /* Adds some padding for a nicer appearance */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    font-size: 16px;
+    /* Adjust font size */
+    border-radius: 5px;
+    /* Adds rounded corners */
+}
+
+.attend-no:hover {
+    background-color: darkred;
+    /* Darker red on hover */
+}
+
+.attendance-message {
+    margin-top: 5px;
+    font-style: italic;
+    /* Make the message stand out a bit */
+    color: #555;
+}

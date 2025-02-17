@@ -4,6 +4,130 @@ function formatDate(date) {
   return date.toLocaleDateString(undefined, options);
 }
 
+
+// OpenWeatherMap API Configuration
+document.addEventListener("DOMContentLoaded", function () {
+  const apiKey = "91f1f1fa857d89e383029f10717bc5f4"; //  OpenWeatherMap API key
+  const city = "Benin City"; // Chamber location
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+  const weatherIcon = document.getElementById("weathericon");
+  const temperatureElement = document.getElementById("temperature");
+  const weatherDesc = document.getElementById("weatherdesc");
+  const forecastContainer = document.createElement("div");
+
+  // Fetch Current Weather
+  fetch(weatherUrl)
+    .then(response => response.json())
+    .then(data => {
+      const temperature = Math.round(data.main.temp);
+      const description = data.weather[0].description;
+      const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+      temperatureElement.textContent = temperature;
+      weatherDesc.textContent = description.charAt(0).toUpperCase() + description.slice(1);
+      weatherIcon.src = icon;
+    })
+    .catch(error => console.error("Error fetching current weather:", error));
+
+  // Fetch 3-Day Forecast
+  fetch(forecastUrl)
+    .then(response => response.json())
+    .then(data => {
+      const forecastData = {};
+
+      // Extract one forecast per day at 12:00 PM
+      data.list.forEach(entry => {
+        const date = new Date(entry.dt_txt);
+        const day = date.toLocaleDateString("en-US", { weekday: "long" });
+
+        if (!forecastData[day] && date.getHours() === 12) {
+          forecastData[day] = {
+            temp: Math.round(entry.main.temp),
+            icon: `https://openweathermap.org/img/wn/${entry.weather[0].icon}.png`,
+            desc: entry.weather[0].description
+          };
+        }
+      });
+
+      // Generate forecast HTML
+      forecastContainer.innerHTML = `<h3>3-Day Forecast</h3>`;
+      Object.keys(forecastData).slice(0, 3).forEach(day => {
+        const forecast = forecastData[day];
+        forecastContainer.innerHTML += `
+                  <div class="forecast-item">
+                      <h4>${day}</h4>
+                      <img src="${forecast.icon}" alt="${forecast.desc}">
+                      <p>${forecast.temp}°C - ${forecast.desc}</p>
+                  </div>
+              `;
+      });
+
+      document.querySelector(".weather-card").appendChild(forecastContainer);
+    })
+    .catch(error => console.error("Error fetching weather forecast:", error));
+});
+
+
+// SpotLight
+document.addEventListener("DOMContentLoaded", function () {
+  const spotlightContainer = document.getElementById("spotlight-container");
+
+  fetch("data/members.json"
+
+
+
+  ) // Ensure your JSON file path is correct
+    .then(response => response.json())
+    .then(data => {
+      // Filter members with Silver or Gold membership
+      const qualifiedMembers = data.Members.filter(member =>
+        member["membership level"] === "Silver" || member["membership level"] === "Gold"
+      );
+
+      // Shuffle array and pick 2-3 members randomly
+      const shuffled = qualifiedMembers.sort(() => 0.5 - Math.random());
+      const selectedMembers = shuffled.slice(0, Math.min(3, shuffled.length));
+
+      // Generate HTML for each selected member
+      spotlightContainer.innerHTML = selectedMembers.map(member => `
+              <div class="spotlight">
+                  <h3>${member.name}</h3>
+                  <p>${member.expertise}</p>
+                  <a href="${member.website}" target="_blank">Visit Website</a>
+              </div>
+          `).join("");
+    })
+    .catch(error => console.error("Error fetching member data:", error));
+});
+
+
+
+
+
+// Banner functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("meet-greet-banner");
+  const closeButton = document.getElementById("close-banner");
+
+  // Check current day (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+  const today = new Date().getDay();
+
+  // Show banner only on Monday (1), Tuesday (2), or Wednesday (3)
+  if (today >= 1 && today <= 3) {
+    banner.style.display = "block";
+  } else {
+    banner.style.display = "none";
+  }
+
+  // Close banner when the button is clicked
+  closeButton.addEventListener("click", function () {
+    banner.style.display = "none";
+  });
+});
+
+
 // Get the last modified date from the document
 const lastModifiedDate = new Date(document.lastModified);
 
@@ -30,7 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('show');
   });
+
+  // Initialize features
+  displayWeather();
+  displaySpotlights();
 });
+
 
 // Function to toggle the navigation menu
 function toggleMenu() {
@@ -146,5 +275,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('hidden');
+  });
+});
+
+
+
+// Events 
+document.addEventListener('DOMContentLoaded', function () {
+  const yesButtons = document.querySelectorAll('.attend-yes');
+  const noButtons = document.querySelectorAll('.attend-no');
+
+  function showMessage(event, message) {
+    const listItem = event.target.closest('li');
+    let messageElement = listItem.querySelector('.attendance-message');
+
+    if (!messageElement) {
+      messageElement = document.createElement('p');
+      messageElement.classList.add('attendance-message');
+      listItem.appendChild(messageElement);
+    }
+    messageElement.textContent = message;
+  }
+
+  yesButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      const eventName = event.target.dataset.event;
+      console.log(`Attending: ${eventName} - Yes`);
+      showMessage(event, "See you there!");
+    });
+  });
+
+  noButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      const eventName = event.target.dataset.event;
+      console.log(`Attending: ${eventName} - No`);
+      showMessage(event, "We are sad that you are not attending.");
+    });
+  });
+});
+
+
+// Stamp Time 
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('joinForm');
+  const timestampField = document.getElementById('timestamp');
+
+  form.addEventListener('submit', function (event) {
+    // Get the current timestamp
+    const now = new Date();
+    const timestamp = now.toISOString(); // Format to ISO string for easier handling
+
+    // Set the value of the hidden timestamp field
+    timestampField.value = timestamp;
+
+    // The form will now submit with the timestamp included
   });
 });

@@ -45,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridButton = document.getElementById("grid");
     const listButton = document.getElementById("list");
 
-    // Set last modified date
-    const lastModified = document.getElementById('last-modified-date');
-    lastModified.textContent = document.lastModified;
 
 
     // Fetch JSON Data

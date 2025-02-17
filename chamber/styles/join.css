@@ -1,0 +1,142 @@
+/*================== Form Styling ===================*/
+form {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+/*================== Fieldset Styling ===================*/
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+/*================== Label Styling ===================*/
+label.top {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+/*================== Label Styling ===================*/
+label.top {
+    display: block;
+    /* Force labels above inputs */
+    font-weight: bold;
+    /* Make labels stand out */
+    margin-bottom: 0.5rem;
+    /* Space below label */
+    color: #444;
+    /* Slightly darker text */
+}
+
+/* Labels for radio buttons */
+label.sbs {
+    display: block;
+    /* Stack vertically */
+    margin: 0.5rem 0;
+    /* Space between options */
+    font-size: 1rem;
+    /* Standard text size */
+    color: #555;
+    /* Slightly muted text */
+    padding: 1px;
+}
+
+fieldset label.sbs input[type="radio"] {
+    margin-right: 0.5rem;
+    /* Space between radio button and text */
+    vertical-align: middle;
+    /* Align the radio button with the text */
+}
+
+/*================== Input & Textarea Styling ===================*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background: #f9f9f9;
+}
+
+
+
+/*================== Input & Textarea Styling ===================*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    width: 100%;
+    /* Full-width inputs */
+    padding: 0.8rem;
+    /* Comfortable padding */
+    font-size: 1rem;
+    /* Readable text size */
+    border: 1px solid #ccc;
+    /* Subtle border */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-bottom: 1rem;
+    /* Space below inputs */
+    background: #f9f9f9;
+    /* Light background */
+}
+
+/* Required fields have a left red border */
+input[required],
+textarea[required] {
+    border-left: 4px solid red;
+    /* Highlight required fields */
+    padding-left: 10px;
+    /* Space for the red line */
+    box-sizing: border-box;
+    /* Maintain spacing */
+}
+
+/* Styling for focus states */
+input:focus,
+textarea:focus {
+    border-color: #1a4d80;
+    /* Blue highlight */
+    outline: none;
+    /* Remove default outline */
+    background-color: #eef7ff;
+    /* Light blue background on focus */
+}
+
+textarea {
+    resize: vertical;
+    /* Allow only vertical resizing */
+}
+
+/*================== Submit Button Styling ===================*/
+.submitBtn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #09427a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #336699;
+}

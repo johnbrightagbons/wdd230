@@ -1,0 +1,68 @@
+.contact-form-section {
+    background: #ffffff;
+    /* White background for contrast */
+    padding: 1.5rem;
+    /* Add space inside form */
+    border-radius: 10px;
+    /* Smooth rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    max-width: 600px;
+    /* Set a maximum width */
+    margin: 2rem auto;
+    /* Center the form horizontally and add vertical margin */
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+input[required],
+textarea[required] {
+    border-left: 4px solid red;
+    padding-left: 10px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1a4d80;
+    outline: none;
+    background-color: #eef7ff;
+}
+
+.submit-btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #09427a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #336699;
+}

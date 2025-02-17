@@ -1,104 +1,56 @@
-/* Tablet Styles - Navigation Layout */
+/* Tablet and Desktop Styles */
 @media (min-width: 768px) {
 
-    /* Main Navigation Links */
+    /* Navigation Layout */
     #nav-links {
         display: flex;
         gap: 2rem;
         padding: 1rem;
-        justify-content: flex-end;
-        background-color: #1a1a1a;
-        /* Consistent with base.css */
+        justify-content: center;
     }
-
-
-
-    /* Ensure Hamburger Menu is Hidden */
-    .hamburger {
-        display: none;
-    }
-
 
     /* Main Content Layout */
     main {
         display: grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-        margin: 0 auto;
-        max-width: 1200px;
-        background-color: #ffffff;
-        /* Ensure consistent background */
-    }
-
-
-
-    /* Card Component Styling */
-    .card {
-        margin: 0;
-        background-color: #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        /* Subtle shadow */
-    }
-
-
-    .image-gallery {
-        grid-template-columns: repeat(2, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        text-align: left;
-        padding: 2rem;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    main {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 3rem;
-    }
-
-
-    .image-gallery {
-        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
 
+    /* Weather Section */
+    .weather-card {
+        grid-template-columns: 1fr 2fr;
+    }
 
-    footer {
+    .current-weather {
+        border-right: 1px solid #eee;
+        border-bottom: none;
+    }
+
+    /* Spotlight Section */
+    .company-spotlights {
         grid-template-columns: repeat(3, 1fr);
-        padding: 3rem;
-    }
-
-    .hero img {
-        max-height: 600px;
-    }
-
-    .cta-button {
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
     }
 }
 
-/* Large Desktop Styles */
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
+
+    /* Navigation Layout */
+    #nav-links {
+        justify-content: flex-end;
+    }
+
+    /* Main Content Layout */
     main {
-        grid-template-columns: repeat(4, minmax(250px, 1fr));
-        max-width: 1600px;
-        padding: 4rem;
+        grid-template-columns: 2fr 1fr;
     }
 
-
-    .image-gallery {
-        grid-template-columns: repeat(4, minmax(250px, 1fr));
-        gap: 2.5rem;
+    /* Weather Section */
+    .weather-card {
+        grid-column: 1 / -1;
     }
 
+    /* Spotlight Section */
+    .company-spotlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

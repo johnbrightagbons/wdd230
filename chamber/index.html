@@ -8,7 +8,7 @@
         content="Official website for WDD 230 course project by John Bright Agbons. A professional portfolio and chamber of commerce site.">
     <meta name="author" content="John Bright Agbons">
     <title>Benin Chamber of Commerce</title>
-    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/larger.css">
@@ -45,6 +45,7 @@
             <li><a href="join.html">Join</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="directory.html">Directory</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -74,42 +75,51 @@
         <!-- Weather Card Section -->
         <section class="weather-card card">
             <h2>Weather Updates</h2>
-            <p>Stay informed about today's weather:</p>
-            <div id="weather-info">
-                <!-- Placeholder content -->
-                <p>Temperature: 72°F</p>
-                <p>Condition: Partly Cloudy</p>
+            <div>
+                <img id="weathericon" src="images/black-sun-with-rays.svg" alt="weather icon">
+                <h2><span id="temperature">?</span>&deg; C</h2>
             </div>
+            <h2 id="weatherdesc">Loading...</h2>
         </section>
+
+
+
+        <!-- Meet & Greet Banner -->
+        <div id="meet-greet-banner" class="banner" style="display: none;">
+            <p>Join us for our Chamber Meet & Greet on Wednesday at 7:00 p.m.!</p>
+            <button id="close-banner" aria-label="Close banner">❌</button>
+        </div>
+
 
         <!-- Company Spotlights Section -->
-        <section class="company-spotlights card">
+        <div id="spotlight-container">
+            <!-- Member spotlights will be dynamically inserted here -->
             <h2>Spotlight Businesses</h2>
-            <div class="spotlight">
-                <h3>Bright Tech Solutions</h3>
-                <p>Leading provider of tech solutions in Ring Road, Benin City</p>
-            </div>
-            <div class="spotlight">
-                <h3>Green Valley Farms</h3>
-                <p>Fresh produce delivered directly to your home.</p>
-            </div>
-            <div class="spotlight">
-                <h3>iBright Builders Co.</h3>
-                <p>Your trusted partner for all construction needs.</p>
-            </div>
-        </section>
+        </div>
+
     </main>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 John Bright Agbons | WDD 230 Project</p>
-
-        <a href="join.html">Join</a>
+        <p>Benin Chamber Of Commerce &copy; 2023 - John Bright Agbons</p>
+        <p><a href="joinus">Join Us</a></p>
         <p id="lastModified">Last Modified: <span id="last-modified-date"></span></p>
+        <div class="social-medias">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Visit our Facebook page" width="32" height="32" loading="lazy">
+
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Visit our Twitter page" width="32" height="32" loading="lazy">
+
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Visit our Instagram page" width="32" height="32" loading="lazy">
+
+            </a>
+        </div>
     </footer>
 
     <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
     <script src="scripts/chamber.js"></script>
+    <script src="scripts/visitTrack.js"></script>
 </body>
-
-</html>
